@@ -19,6 +19,10 @@ export default defineConfig({
       },
       sidebar: [
         {
+          label: 'Introduction',
+          link: '/introduction',
+        },
+        {
           label: 'Rules',
           autogenerate: {
             directory: 'rules',
@@ -52,22 +56,6 @@ export default defineConfig({
           label: 'Setting',
           autogenerate: {
             directory: 'setting',
-          },
-        },
-        {
-          label: 'Guides',
-          items: [
-            // Each item here is one entry in the navigation menu.
-            {
-              label: 'Example Guide',
-              link: '/guides/example/',
-            },
-          ],
-        },
-        {
-          label: 'Reference',
-          autogenerate: {
-            directory: 'reference',
           },
         },
       ],
