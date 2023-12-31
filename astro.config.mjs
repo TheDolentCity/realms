@@ -19,6 +19,12 @@ export default defineConfig({
       },
       sidebar: [
         {
+          label: 'Rules',
+          autogenerate: {
+            directory: 'rules',
+          },
+        },
+        {
           label: 'Regents',
           autogenerate: {
             directory: 'regents',
