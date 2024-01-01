@@ -1,0 +1,22 @@
+---
+interface Props {
+  name: string;
+  value: string;
+}
+
+const { name, value } = Astro.props;
+---
+
+<div class='not-content inline-flex flex-col items-center'>
+  <div
+    class='flex w-20 h-20 mx-auto p-2 items-center justify-center text-3xl font-bold tracking-tight rounded-full border-2 border-accent-700 text-accent-900 bg-accent-50 dark:border-accent-200 dark:text-gray-200 dark:bg-accent-950/50'
+  >
+    {value}
+  </div>
+  <div
+    class='inline -mt-2 px-3 rounded border-2 text-center text-lg tracking-tight font-bold truncate border-gray-700 text-gray-950 bg-gray-200 dark:border-accent-200 dark:text-accent-950 dark:bg-accent-200'
+    title={name}
+  >
+    {name}
+  </div>
+</div>

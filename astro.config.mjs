@@ -27,9 +27,19 @@ export default defineConfig({
           link: '/map',
         },
         {
+          label: 'Realm Updates',
+          link: '/realm-updates',
+        },
+        {
           label: 'Rules',
           autogenerate: {
             directory: 'rules',
+          },
+        },
+        {
+          label: 'Realms',
+          autogenerate: {
+            directory: 'realms',
           },
         },
         {
@@ -48,6 +58,12 @@ export default defineConfig({
           label: 'Minor Houses',
           autogenerate: {
             directory: 'minor-houses',
+          },
+        },
+        {
+          label: 'Stewards',
+          autogenerate: {
+            directory: 'stewards',
           },
         },
         {

@@ -23,11 +23,8 @@ This represents the population's food stores and daily subsistence. High food ke
 ### Health
 This represents the population's health. High health is useful for morale and warfare, low health leads to a decrease in population.
 
-### Loyalty
-This represents the loyalty of the populace. High loyalty is useful for warfare, low loyalty is dangerous.
-
 ### Morale
-This represents the general happiness of the populace. High morale is useful for resisting negative events, low morale makes certain negative events more likely.
+This represents the general happiness and loyalty of the populace. High morale is useful for resisting negative events, low morale makes certain negative events more likely.
 
 ### Navy
 This represents the strength of the realm's navy. High navy is useful for controlling sea trade and ports during times of war.
