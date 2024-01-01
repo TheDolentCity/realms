@@ -23,6 +23,10 @@ export default defineConfig({
           link: '/introduction',
         },
         {
+          label: 'Map',
+          link: '/map',
+        },
+        {
           label: 'Rules',
           autogenerate: {
             directory: 'rules',
