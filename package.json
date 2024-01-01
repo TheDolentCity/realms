@@ -10,15 +10,21 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.2.1",
-    "@astrojs/starlight": "^0.11.2",
-    "@astrojs/starlight-tailwind": "^2.0.0",
-    "@astrojs/tailwind": "^5.0.2",
+    "@astrojs/check": "^0.3.4",
+    "@astrojs/react": "^3.0.9",
+    "@astrojs/starlight": "^0.15.1",
+    "@astrojs/starlight-tailwind": "^2.0.1",
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vercel": "^6.1.1",
     "@fontsource/averia-serif-libre": "^5.0.18",
     "@fontsource/im-fell-english-sc": "^5.0.8",
-    "astro": "^3.2.3",
-    "sharp": "^0.32.5",
-    "tailwindcss": "^3.0.24",
-    "typescript": "^5.2.2"
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "astro": "^4.0.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sharp": "^0.32.6",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.3"
   }
 }
