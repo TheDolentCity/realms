@@ -12,7 +12,7 @@ At the start of each turn, players receive letters and one action token. On thei
 
 ## Realm Updates
 Once the Game Master has received all of the letters and actions from players, they craft a realm update. When the realm update is posted a new turn begins. Everything in the realm update is public and includes the following information:
-- A new [realm event](/rules/realm-events). One is rolled every update.
+- New [realm events](/rules/realm-events). One is rolled for each realm, every update, but oftentimes a meaningful event does not occur.
 - A list of [realm actions](/rules/realm-actions) taken by regents and their outcomes. Some realm actions can fail and some may not even be public.
 - Updates to [realm stats](/rules/realm-checks#stats), such as Wealth or Morale, are public but not explicitly listed.
 
