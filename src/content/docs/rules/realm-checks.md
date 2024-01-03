@@ -3,7 +3,7 @@ title: Realm Checks
 description: The descriptions for each realm's stats used in the game.
 ---
 
-Sometimes we use dice to determine outcomes for a realm. For example, an unloyal populice may stage a coup. Each realm has several stats rated from 1-100. When a realm check is called for, a d100 is rolled and if the result is less than the stat, the check is successful. If a realm's loyalty is 84, then they have an 84% chance of success for a loyalty check.
+Sometimes we use dice to determine outcomes for a realm. For example, an unloyal populice may stage a coup. Each realm has several stats rated from 1-100. When a realm check is called for, a d100 is rolled and if the result is less than the stat, the check is successful. If a realm's morale is 84, then they have an 84% chance of success for a morale check.
 
 ## Stats
 Every realm has several stats. These abstract away things like happiness, religious devotion, food, and wealth. A realm with high stats is very powerful.
@@ -54,3 +54,6 @@ A realm may have the following delta stats:
 - Crime +2
 
 This realm would have significant access to resources and wealth, but struggle to feed their people and quash crime rings.
+
+## Burg Checks
+These operate the same exact way as a Realm Check, but instead of representing an entire realm, it only represents a burg. Burgs are seats of power for minor houses, like Stormport or Rockmire.

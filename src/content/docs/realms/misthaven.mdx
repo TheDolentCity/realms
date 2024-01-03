@@ -1,0 +1,36 @@
+---
+title: Misthaven
+description: Details and game statistics for the realm of Misthaven.
+---
+
+import Stat from '/src/components/stats/Stat.astro';
+import StatGrid from '/src/components/stats/StatGrid.astro';
+
+Misthaven is a large, northern land dominated by the Great Lake. The eastern part of the realm supposedly connects to Eastmark, but a fog lies upon that place and none who venture there return. The people who live here believe the water of this land is blessed by the Great Beasts, restoring the health of the elderly and frail. There is a deep sadness in the land though. Almost the entire population died when Eastmark invaded. The land is filled with bones and bogs. A nefarious cult believes the [King of Fog](/setting/religion#the-king-of-fog) will one day return from the East and conquer Westmark as a God King.
+
+## Stats
+These stats are used when making realm checks for Misthaven.
+
+<StatGrid>
+  <Stat name="Health" value="89" />
+  <Stat name="Morale" value="63" />
+  <Stat name="Population" value="52" />
+  <Stat name="Reverance" value="76" />
+  <Stat name="Food" value="35" />
+  <Stat name="Resources" value="48" />
+  <Stat name="Trade" value="29" />
+  <Stat name="Wealth" value="24" />
+  <Stat name="Army" value="17" />
+  <Stat name="Navy" value="6" />
+  <Stat name="Defenses" value="14" />
+  <Stat name="Crime" value="11" />
+</StatGrid>
+
+## Delta Stats
+Every turn, this realm's stats change by the following amounts:
+<StatGrid>
+  <Stat name="Health" value="+2" />
+  <Stat name="Reverance" value="+1" />
+  <Stat name="Food" value="-1" />
+  <Stat name="Morale" value="-2" />
+</StatGrid>
