@@ -1,5 +1,4 @@
 {
-  "cSpell.words": [
-    "astrojs"
-  ]
+  "cSpell.words": ["astrojs"],
+  "editor.wordWrap": "on"
 }

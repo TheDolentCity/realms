@@ -1,0 +1,38 @@
+---
+title: Barrowdell
+description: Details and game statistics for the realm of Barrowdell.
+---
+
+import Stat from '/src/components/stats/Stat.astro';
+import StatGrid from '/src/components/stats/StatGrid.astro';
+
+##### Ruled by [House Ulfrar](/great-houses/house-ulfrar).
+
+Barrowdell is a central region with a cold and wet climate. House Ulfrar has a long history of attacking neighboring realms or orchestrating raids that are later denounced for appearances sake. The realm is filled with mercenaries who believe [The Cairn Eternal](/setting/religion#the-cairn-eternal) has bestowed them with the divine right to pillage other realms. Thieves, highwaymen, and other criminals are forced into the army with the threat of death.
+
+## Stats
+These stats are used when making realm checks for Barrowdell.
+
+<StatGrid>
+  <Stat name="Health" value="27" />
+  <Stat name="Morale" value="31" />
+  <Stat name="Population" value="42" />
+  <Stat name="Reverance" value="65" />
+  <Stat name="Food" value="36" />
+  <Stat name="Resources" value="19" />
+  <Stat name="Trade" value="49" />
+  <Stat name="Wealth" value="54" />
+  <Stat name="Army" value="78" />
+  <Stat name="Navy" value="8" />
+  <Stat name="Defenses" value="91" />
+  <Stat name="Crime" value="14" />
+</StatGrid>
+
+## Delta Stats
+Every turn, this realm's stats change by the following amounts:
+<StatGrid>
+  <Stat name="Army" value="+2" />
+  <Stat name="Crime" value="-1" />
+  <Stat name="Resources" value="-1" />
+  <Stat name="Wealth" value="-2" />
+</StatGrid>

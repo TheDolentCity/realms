@@ -26,8 +26,6 @@ export default defineConfig({
       ],
       social: {
         github: 'https://github.com/TheDolentCity/realms',
-        discord:
-          'https://discord.com/channels/827358451113787402/1082374621782872155/1082375723815276694',
       },
       sidebar: [
         {
@@ -47,13 +45,22 @@ export default defineConfig({
           },
         },
         {
+          label: 'Setting',
+          collapsed: true,
+          autogenerate: {
+            directory: 'setting',
+          },
+        },
+        {
           label: 'Realms',
+          collapsed: true,
           autogenerate: {
             directory: 'realms',
           },
         },
         {
           label: 'Regents',
+          collapsed: true,
           autogenerate: {
             directory: 'regents',
           },
@@ -91,13 +98,6 @@ export default defineConfig({
           collapsed: true,
           autogenerate: {
             directory: 'burgs',
-          },
-        },
-        {
-          label: 'Setting',
-          collapsed: true,
-          autogenerate: {
-            directory: 'setting',
           },
         },
       ],
