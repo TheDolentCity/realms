@@ -1,0 +1,38 @@
+---
+title: Umberland
+description: Details and game statistics for the realm of Umberland.
+---
+
+import Stat from '/src/components/stats/Stat.astro';
+import StatGrid from '/src/components/stats/StatGrid.astro';
+
+##### Ruled by [House Umbar](/great-houses/house-umbar).
+
+Umberland is a large region covering the western coast and the Thorngrove Forest. Much of the land is marshy and difficult to build on, so most of the villages are built on the seaside cliffs. House Umbar has a massive navy that patrols and taxes the western sea, making them quite rich.
+
+## Stats
+These stats are used when making realm checks for Umberland.
+
+<StatGrid>
+  <Stat name="Health" value="32" />
+  <Stat name="Morale" value="9" />
+  <Stat name="Population" value="47" />
+  <Stat name="Reverance" value="16" />
+  <Stat name="Food" value="39" />
+  <Stat name="Resources" value="21" />
+  <Stat name="Trade" value="65" />
+  <Stat name="Wealth" value="76" />
+  <Stat name="Army" value="53" />
+  <Stat name="Navy" value="91" />
+  <Stat name="Defenses" value="28" />
+  <Stat name="Crime" value="12" />
+</StatGrid>
+
+## Delta Stats
+Every turn, this realm's stats change by the following amounts:
+<StatGrid>
+  <Stat name="Navy" value="+1" />
+  <Stat name="Wealth" value="+2" />
+  <Stat name="Morale" value="-1" />
+  <Stat name="Defenses" value="-1" />
+</StatGrid>

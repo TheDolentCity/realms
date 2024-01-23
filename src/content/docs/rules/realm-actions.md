@@ -7,9 +7,13 @@ Regents can perform one realm action on their turn. These actions take time and 
 
 ## Make a Decree (1)
 This is any new general decree or rule for the realm you rule over. It can affect almost any in-game statistic. Here are a few examples:
-- Imposing new taxes to increase [Wealth](/rules/realm-checks#wealth), but decrease [Morale](/rules/realm-checks#morale) and potentially [Loyalty](/rules/realm-checks#loyalty)
+- Imposing new taxes to increase [Wealth](/rules/realm-checks#wealth), but decrease [Morale](/rules/realm-checks#morale)
 - Throwing a festival or tournament to increase [Morale](/rules/realm-checks#morale), but decrease [Wealth](/rules/realm-checks#wealth)
 - Arrests and crackdowns to decrease [Crime](/rules/realm-checks#crime)
+
+## Invoke Religious Doctrine (1)
+Sway the opinion of your realm by invoking religious doctrine. A reverance check will be necessary. Here are a few examples:
+- In a realm where the Great Beasts are worshipped, you could state there has been an omen and the realm must march to war.
 
 ## Host a Council (1)
 Invite any number of regents or minor rulers to your realm for a council. A diplomacy check is necessary for each NPC that would not want to attend. Those who agree to visit can bring a retinue of no more than ten unless they wish to spend a realm token to attend. If an invited guest is significantly far away, they must spend realm tokens to travel (number determined by GM).
@@ -52,11 +56,11 @@ Choose a regent or steward and make an intrigue check. On a success, you may int
 
 If you destroy any letters, they will eventually hear (1-3 turns) that word did not reach their intended recipient.
 
-## Sabotage (1)
-Choose a realm where you would like to influence the populace. This could mean decreasing reverance with unholy speeches, increasing crime with a black market, or anything else you can imagine to sabotage the population. An intrigue check may be necessary.
+## Undermine (1)
+Choose a realm you would like to influence. This could mean decreasing reverance with unholy speeches, increasing crime with smuggled goods, or anything else you can imagine to sabotage the realm. An intrigue check may be necessary.
 
 ## Muster Troops (1)
-Muster troops for war. This action must be taken before the battle, pillage, or siege action can be performed. Mustering troops will decrease morale, resources, and wealth. 
+Muster troops for war. This action must be taken before the battle, pillage, or siege action can be performed. Mustering troops will decrease morale, resources, and wealth.
 
 ## Battle (1)
 You must perform the muster troops action before this can be performed. Engage another army, navy, or foe in warfare. Both sides must provide the GM with their battle strategy and then the GM will make whatever realm checks or regent checks they think necessary to perform the battle and determine the outcome.
@@ -64,9 +68,9 @@ You must perform the muster troops action before this can be performed. Engage a
 Only the side that initiates the battle must spend an action token on it.
 
 ## Pillage (1)
-You must perform the muster troops action before this can be performed. Engage civilians with your army or navy. This is devastating for the realm you attack, but will impact your honor and possibly the loyalty of your allies.
+You must perform the muster troops action before this can be performed. Engage civilians with your army or navy. This is devastating for the realm you attack, but will impact your honor and possibly the morale of your allies.
 
 ## Siege (1)
-You must perform the muster troops action before this can be performed. Engage a fortress or castle in a siege. This may transition into a battle if either side wishes to, otherwise the action has no immediate outcome. The realm that is sieged quickly loses food, health, morale, loyalty, and population until the siege ends.
+You must perform the muster troops action before this can be performed. Engage a fortress or castle in a siege. This may transition into a battle if either side wishes to, otherwise the action has no immediate outcome. The realm that is sieged quickly loses food, health, morale, and population until the siege ends.
 
 The siege ends when the besieged surrender or the regent leading the siege does not spend their action on the siege.

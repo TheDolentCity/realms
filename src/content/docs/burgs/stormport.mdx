@@ -1,0 +1,35 @@
+---
+title: Stormport
+description: Details and game statistics for the realm of Stormport.
+---
+
+import Stat from '/src/components/stats/Stat.astro';
+import StatGrid from '/src/components/stats/StatGrid.astro';
+
+Stormport is a tempestuous southwestern fort.
+
+## Stats
+These stats are used when making burg checks for Stormport.
+
+<StatGrid>
+  <Stat name="Health" value="27" />
+  <Stat name="Morale" value="24" />
+  <Stat name="Population" value="38" />
+  <Stat name="Reverance" value="29" />
+  <Stat name="Food" value="42" />
+  <Stat name="Resources" value="51" />
+  <Stat name="Trade" value="57" />
+  <Stat name="Wealth" value="49" />
+  <Stat name="Army" value="35" />
+  <Stat name="Navy" value="64" />
+  <Stat name="Defenses" value="31" />
+  <Stat name="Crime" value="46" />
+</StatGrid>
+
+## Delta Stats
+Every turn, this burg's stats change by the following amounts:
+<StatGrid>
+  <Stat name="Resources" value="+1" />
+  <Stat name="Wealth" value="+1" />
+  <Stat name="Crime" value="+2" />
+</StatGrid>

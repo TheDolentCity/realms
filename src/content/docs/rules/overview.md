@@ -20,7 +20,7 @@ Once the Game Master has received all of the letters and actions from players, t
 Regents can perform various realm actions, such as making decrees, wooing lovers, or mustering troops for war. These actions take time and resources, represented by action tokens. Most realm actions only cost one action token, but some cost several as they require months of planning to get right.
 
 ## [Realm Checks](/rules/realm-checks)
-Sometimes we use dice to determine outcomes for a realm. For example, an unloyal populice may stage a coup. Each realm has several stats rated from 1-100. When a realm check is called for, a d100 is rolled and if the result is less than the stat, the check is successful. If a realm's loyalty is 84, then they have an 84% chance of success for a loyalty check.
+Sometimes we use dice to determine outcomes for a realm. For example, an unloyal populice may stage a coup. Each realm has several stats rated from 1-100. When a realm check is called for, a d100 is rolled and if the result is less than the stat, the check is successful. If a realm's morale is 84, then they have an 84% chance of success for a morale check.
 
 ## [Regent Checks](/rules/regent-checks)
 Sometimes we use dice to determine outcomes for a regent. For example, a regent will need to roll romance to woo a lover. Each regent has several stats rated from 1-100. When a regent check is called for, a d100 is rolled and if the result is less than the stat, the check is successful. If a regent's romance is 34, then they have a 34% chance of success for a romance check.

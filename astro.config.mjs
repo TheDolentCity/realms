@@ -17,27 +17,26 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Realms',
+      components: {
+        Sidebar: './src/components/overrides/SidebarOverride.astro',
+      },
       customCss: [
         // Path to your Tailwind base styles:
         './src/tailwind.css',
       ],
       social: {
         github: 'https://github.com/TheDolentCity/realms',
-        discord:
-          'https://discord.com/channels/827358451113787402/1082374621782872155/1082375723815276694',
       },
       sidebar: [
         {
-          label: 'Introduction',
-          link: '/introduction',
-        },
-        {
-          label: 'Map',
-          link: '/map',
-        },
-        {
-          label: 'Realm Updates',
-          link: '/realm-updates',
+          label: 'Home',
+          collapsed: false,
+          items: [
+            { label: 'Introduction', link: '/home/introduction' },
+            { label: 'Realm Map', link: '/home/realm-map' },
+            { label: 'Realm Updates', link: '/home/realm-updates' },
+            { label: 'Game Setup', link: '/home/game-setup' },
+          ],
         },
         {
           label: 'Rules',
@@ -46,45 +45,59 @@ export default defineConfig({
           },
         },
         {
+          label: 'Setting',
+          collapsed: true,
+          autogenerate: {
+            directory: 'setting',
+          },
+        },
+        {
           label: 'Realms',
+          collapsed: true,
           autogenerate: {
             directory: 'realms',
           },
         },
         {
           label: 'Regents',
+          collapsed: true,
           autogenerate: {
             directory: 'regents',
           },
         },
         {
+          label: 'Stewards',
+          collapsed: true,
+          autogenerate: {
+            directory: 'stewards',
+          },
+        },
+        {
           label: 'Great Houses',
+          collapsed: true,
           autogenerate: {
             directory: 'great-houses',
           },
         },
         {
           label: 'Minor Houses',
+          collapsed: true,
           autogenerate: {
             directory: 'minor-houses',
           },
         },
         {
-          label: 'Stewards',
-          autogenerate: {
-            directory: 'stewards',
-          },
-        },
-        {
           label: 'Seats of Power',
+          collapsed: true,
           autogenerate: {
             directory: 'seats-of-power',
           },
         },
         {
-          label: 'Setting',
+          label: 'Burgs',
+          collapsed: true,
           autogenerate: {
-            directory: 'setting',
+            directory: 'burgs',
           },
         },
       ],

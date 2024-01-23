@@ -1,0 +1,38 @@
+---
+title: Flooded Vale
+description: Details and game statistics for the realm of Flooded Vale.
+---
+
+import Stat from '/src/components/stats/Stat.astro';
+import StatGrid from '/src/components/stats/StatGrid.astro';
+
+##### Ruled by [House Ashcroft](/great-houses/house-ashcroft).
+
+TODO
+
+## Stats
+These stats are used when making realm checks for Flooded Vale.
+
+<StatGrid>
+  <Stat name="Health" value="17" />
+  <Stat name="Morale" value="9" />
+  <Stat name="Population" value="33" />
+  <Stat name="Reverance" value="68" />
+  <Stat name="Food" value="38" />
+  <Stat name="Resources" value="55" />
+  <Stat name="Trade" value="45" />
+  <Stat name="Wealth" value="47" />
+  <Stat name="Army" value="61" />
+  <Stat name="Navy" value="58" />
+  <Stat name="Defenses" value="37" />
+  <Stat name="Crime" value="48" />
+</StatGrid>
+
+## Delta Stats
+Every turn, this realm's stats change by the following amounts:
+<StatGrid>
+  <Stat name="Reverance" value="+2" />
+  <Stat name="Army" value="+2" />
+  <Stat name="Wealth" value="-1" />
+  <Stat name="Crime" value="+3" />
+</StatGrid>

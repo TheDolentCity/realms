@@ -1,5 +1,16 @@
 {
   "cSpell.words": [
-    "astrojs"
-  ]
+    "astrojs",
+    "Aven",
+    "Dawnstone",
+    "Eastmark",
+    "Imperion",
+    "Langloom",
+    "Misthaven",
+    "Moxton",
+    "Northstar",
+    "Westmark"
+  ],
+  "editor.wordWrap": "on",
+  "cSpell.enabled": true
 }
