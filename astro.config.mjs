@@ -1,14 +1,11 @@
-import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
-import tailwind from '@astrojs/tailwind';
-import vercelStatic from '@astrojs/vercel/static';
+import { defineConfig } from "astro/config";
+import starlight from "@astrojs/starlight";
+import vercelAdapter from "@astrojs/vercel";
+import tailwindcss from "@tailwindcss/vite";
 
-import react from '@astrojs/react';
-
-// https://astro.build/config
 export default defineConfig({
-  output: 'static',
-  adapter: vercelStatic({
+  output: "static",
+  adapter: vercelAdapter({
     imageService: true,
     speedInsights: {
       enabled: true,
@@ -16,93 +13,99 @@ export default defineConfig({
   }),
   integrations: [
     starlight({
-      title: 'Realms',
+      title: "Realms",
       components: {
-        Sidebar: './src/components/overrides/SidebarOverride.astro',
+        Sidebar: "./src/components/overrides/SidebarOverride.astro",
       },
       customCss: [
-        // Path to your Tailwind base styles:
-        './src/tailwind.css',
+        "./src/styles/global.css",
+        "@fontsource/im-fell-dw-pica/400.css",
+        "@fontsource/averia-serif-libre/400.css",
       ],
-      social: {
-        github: 'https://github.com/TheDolentCity/realms',
-      },
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/TheDolentCity/realms",
+        },
+      ],
       sidebar: [
         {
-          label: 'Home',
+          label: "Home",
           collapsed: false,
           items: [
-            { label: 'Introduction', link: '/home/introduction' },
-            { label: 'Realm Map', link: '/home/realm-map' },
-            { label: 'Realm Updates', link: '/home/realm-updates' },
-            { label: 'Game Setup', link: '/home/game-setup' },
+            { label: "Introduction", link: "/home/introduction" },
+            { label: "Realm Map", link: "/home/realm-map" },
+            { label: "Realm Updates", link: "/home/realm-updates" },
+            { label: "Game Setup", link: "/home/game-setup" },
           ],
         },
         {
-          label: 'Rules',
+          label: "Rules",
           autogenerate: {
-            directory: 'rules',
+            directory: "rules",
           },
         },
         {
-          label: 'Setting',
+          label: "Setting",
           collapsed: true,
           autogenerate: {
-            directory: 'setting',
+            directory: "setting",
           },
         },
         {
-          label: 'Realms',
+          label: "Realms",
           collapsed: true,
           autogenerate: {
-            directory: 'realms',
+            directory: "realms",
           },
         },
         {
-          label: 'Regents',
+          label: "Regents",
           collapsed: true,
           autogenerate: {
-            directory: 'regents',
+            directory: "regents",
           },
         },
         {
-          label: 'Stewards',
+          label: "Stewards",
           collapsed: true,
           autogenerate: {
-            directory: 'stewards',
+            directory: "stewards",
           },
         },
         {
-          label: 'Great Houses',
+          label: "Great Houses",
           collapsed: true,
           autogenerate: {
-            directory: 'great-houses',
+            directory: "great-houses",
           },
         },
         {
-          label: 'Minor Houses',
+          label: "Minor Houses",
           collapsed: true,
           autogenerate: {
-            directory: 'minor-houses',
+            directory: "minor-houses",
           },
         },
         {
-          label: 'Seats of Power',
+          label: "Seats of Power",
           collapsed: true,
           autogenerate: {
-            directory: 'seats-of-power',
+            directory: "seats-of-power",
           },
         },
         {
-          label: 'Burgs',
+          label: "Burgs",
           collapsed: true,
           autogenerate: {
-            directory: 'burgs',
+            directory: "burgs",
           },
         },
       ],
     }),
-    tailwind(),
-    react(),
   ],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

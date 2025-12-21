@@ -5,27 +5,31 @@ description: Details and game statistics for the realm of Breakwater.
 
 import Stat from '/src/components/stats/Stat.astro';
 import StatGrid from '/src/components/stats/StatGrid.astro';
+import StatGroup from '/src/components/stats/StatGroup.astro';
 
 ##### Ruled by [House Ethelridge](/great-houses/house-ethelridge).
 
-TODO
-
 ## Stats
-These stats are used when making realm checks for Breakwater.
 
 <StatGrid>
-  <Stat name="Health" value="76" />
-  <Stat name="Morale" value="71" />
-  <Stat name="Population" value="75" />
-  <Stat name="Reverance" value="52" />
-  <Stat name="Food" value="77" />
-  <Stat name="Resources" value="50" />
-  <Stat name="Trade" value="86" />
-  <Stat name="Wealth" value="42" />
-  <Stat name="Army" value="31" />
-  <Stat name="Navy" value="23" />
-  <Stat name="Defenses" value="30" />
-  <Stat name="Crime" value="40" />
+  <StatGroup class="col-span-12" title="Spirit" value={((100-40)+76+71+52)/4}>
+    <Stat name="Crime" value="40" inverse={true} />
+    <Stat name="Health" value="76" />
+    <Stat name="Morale" value="71" />
+    <Stat name="Reverence" value="52" />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Prosperity" value={(77+50+86+42)/4}>
+    <Stat name="Food" value="77" />
+    <Stat name="Resources" value="50" />
+    <Stat name="Trade" value="86" />
+    <Stat name="Wealth" value="42" />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Might" value={(31+23+30+75)/4}>
+    <Stat name="Army" value="31" />
+    <Stat name="Navy" value="23" />
+    <Stat name="Defenses" value="30" />
+    <Stat name="Population" value="75" />
+  </StatGroup>
 </StatGrid>
 
 ## Delta Stats

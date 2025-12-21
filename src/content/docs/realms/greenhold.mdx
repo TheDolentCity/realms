@@ -5,33 +5,37 @@ description: Details and game statistics for the realm of Greenhold.
 
 import Stat from '/src/components/stats/Stat.astro';
 import StatGrid from '/src/components/stats/StatGrid.astro';
+import StatGroup from '/src/components/stats/StatGroup.astro';
 
 ##### Ruled by [House Langloom](/great-houses/house-langloom).
 
 Greenhold is a large, eastern realm of temperate climate. Large sections of the land are encompassed by the Northern Kingswood, but everything else is farmland. The bounty of the land is great and the people never go hungry. Many other realms rely on Greenhold's food trade to survive. House Langloom has few enemies as a result of this trade, and many of their defenses have fallen into disrepair as a result.
 
-## Stats
-These stats are used when making realm checks for Greenhold.
-
 <StatGrid>
-  <Stat name="Health" value="62" />
-  <Stat name="Morale" value="52" />
-  <Stat name="Population" value="72" />
-  <Stat name="Reverance" value="28" />
-  <Stat name="Food" value="87" />
-  <Stat name="Resources" value="38" />
-  <Stat name="Trade" value="75" />
-  <Stat name="Wealth" value="53" />
-  <Stat name="Army" value="24" />
-  <Stat name="Navy" value="17" />
-  <Stat name="Defenses" value="9" />
-  <Stat name="Crime" value="14" />
+  <StatGroup class="col-span-12" title="Spirit" value={((100-14)+62+52+28)/4}>
+    <Stat name="Crime" value="14" inverse={true} />
+    <Stat name="Health" value="62" />
+    <Stat name="Morale" value="52" />
+    <Stat name="Reverence" value="28" />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Prosperity" value={(87+38+75+53)/4}>
+    <Stat name="Food" value="87" />
+    <Stat name="Resources" value="38" />
+    <Stat name="Trade" value="75" />
+    <Stat name="Wealth" value="53" />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Might" value={(24+17+9+72)/4}>
+    <Stat name="Army" value="24" />
+    <Stat name="Navy" value="17" />
+    <Stat name="Defenses" value="9" />
+    <Stat name="Population" value="72" />
+  </StatGroup>
 </StatGrid>
 
 ## Delta Stats
 Every turn, this realm's stats change by the following amounts:
 <StatGrid>
   <Stat name="Food" value="+3" />
-  <Stat name="Reverance" value="-1" />
+  <Stat name="Reverence" value="-1" />
   <Stat name="Defenses" value="-2" />
 </StatGrid>

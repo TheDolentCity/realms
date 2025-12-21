@@ -1,20 +1,50 @@
 ---
+import { CssBuilder } from "../../utilities/css-builder";
+
 interface Props {
   name: string;
-  value: string;
+  value: number;
+  colorless: boolean;
+  inverse: boolean;
 }
 
-const { name, value } = Astro.props;
+const { name, value, colorless = false, inverse = false } = Astro.props;
+
+const v = inverse ? 100 - value : value;
+const saturate = Math.abs(v - 50) * 2.5;
+const backgroundCss = new CssBuilder()
+  .addClass(
+    "flex w-20 h-20 mx-auto p-2 items-center justify-center text-3xl font-bold tracking-tight rounded-full border-2 bg-linear-to-t lining-nums font-num"
+  )
+  .addClass(
+    "border-zinc-500 text-zinc-100 from-zinc-700 via-zinc-800 to-zinc-950/50 from-0% via-50% to-100%",
+    colorless
+  )
+  .addClass(
+    "border-green-500 text-green-100 from-green-700 via-green-800 to-green-950/50 from-0% via-70% to-90%",
+    v >= 80 && !colorless
+  )
+  .addClass(
+    "border-green-500 text-green-100 from-green-700 via-green-800 to-green-950/75 from-0% via-40% to-80%",
+    v < 80 && v >= 40 && !colorless
+  )
+  .addClass(
+    "border-amber-500 text-amber-100 from-amber-700 via-amber-800 to-amber-950/75 from-0% via-20% to-40%",
+    v < 40 && v >= 20 && !colorless
+  )
+  .addClass(
+    "border-red-500 text-red-400 from-red-700 via-red-800 to-red-950/75 from-0% via-10% to-20%",
+    v < 20 && !colorless
+  )
+  .build();
 ---
 
-<div class='not-content inline-flex flex-col items-center'>
-  <div
-    class='flex w-20 h-20 mx-auto p-2 items-center justify-center text-3xl font-bold tracking-tight rounded-full border-2 border-[--sl-color-text-accent] text-[--sl-color-text-accent] bg-accent-50 dark:bg-accent-950/50'
-  >
+<div class="not-content inline-flex flex-col w-20 items-center">
+  <div class={backgroundCss} style={{ filter: `saturate(${saturate}%)` }}>
     {value}
   </div>
   <div
-    class='inline -mt-2 px-3 py-0.5 rounded text-center text-lg tracking-tight font-bold truncate text-[--sl-color-text-invert] bg-[--sl-color-text-accent]'
+    class="inline px-3 pt-1.5 rounded text-center text-lg leading-none tracking-wider truncate text-[--sl-color-text-invert] bg-[--sl-color-text-accent]"
     title={name}
   >
     {name}

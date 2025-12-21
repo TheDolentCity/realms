@@ -5,27 +5,31 @@ description: Details and game statistics for the realm of Fairfield.
 
 import Stat from '/src/components/stats/Stat.astro';
 import StatGrid from '/src/components/stats/StatGrid.astro';
+import StatGroup from '/src/components/stats/StatGroup.astro';
 
 ##### Ruled by [House Imperion](/great-houses/house-imperion).
 
 TODO
 
-## Stats
-These stats are used when making realm checks for Fairfield.
-
 <StatGrid>
-  <Stat name="Health" value="48" />
-  <Stat name="Morale" value="55" />
-  <Stat name="Population" value="72" />
-  <Stat name="Reverance" value="36" />
-  <Stat name="Food" value="44" />
-  <Stat name="Resources" value="57" />
-  <Stat name="Trade" value="91" />
-  <Stat name="Wealth" value="95" />
-  <Stat name="Army" value="72" />
-  <Stat name="Navy" value="2" />
-  <Stat name="Defenses" value="35" />
-  <Stat name="Crime" value="22" />
+  <StatGroup class="col-span-12" title="Spirit" value={((100-22)+48+55+36)/4}>
+    <Stat name="Crime" value="22" inverse={true} />
+    <Stat name="Health" value="48" />
+    <Stat name="Morale" value="55" />
+    <Stat name="Reverence" value="36" />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Prosperity" value={(44+57+91+95)/4}>
+    <Stat name="Food" value="44" />
+    <Stat name="Resources" value="57" />
+    <Stat name="Trade" value="91" />
+    <Stat name="Wealth" value="95" />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Might" value={(72+2+35+72)/4}>
+    <Stat name="Army" value="72" />
+    <Stat name="Navy" value="2" />
+    <Stat name="Defenses" value="35" />
+    <Stat name="Population" value="72" />
+  </StatGroup>
 </StatGrid>
 
 ## Delta Stats
@@ -34,5 +38,5 @@ Every turn, this realm's stats change by the following amounts:
   <Stat name="Morale" value="+2" />
   <Stat name="Wealth" value="+1" />
   <Stat name="Crime" value="+1" />
-  <Stat name="Reverance" value="-2" />
+  <Stat name="Reverence" value="-2" />
 </StatGrid>

@@ -5,27 +5,31 @@ description: Details and game statistics for the realm of Frostwatch.
 
 import Stat from '/src/components/stats/Stat.astro';
 import StatGrid from '/src/components/stats/StatGrid.astro';
+import StatGroup from '/src/components/stats/StatGroup.astro';
 
 ##### Ruled by [House Ironwood](/great-houses/house-ironwood).
 
 Frostwatch is a cold northern land. The conditions are harsh and make it difficult to grow food, but plenty of natural resources like timber, stone, and whale oil draws many traders. Remheim, the seat of power, is a massive castle with a keep second only in size to that of Dawnstone. The people who live here may seem bitter to outsiders, but many of them have found peace in this land and they are used to extreme hardship. However, many resort to theft and robbery in order to obtain food. Brigands often attack on the road.
 
-## Stats
-These stats are used when making realm checks for Frostwatch.
-
 <StatGrid>
-  <Stat name="Health" value="34" />
-  <Stat name="Morale" value="77" />
-  <Stat name="Population" value="39" />
-  <Stat name="Reverance" value="22" />
-  <Stat name="Food" value="7" />
-  <Stat name="Resources" value="82" />
-  <Stat name="Trade" value="66" />
-  <Stat name="Wealth" value="18" />
-  <Stat name="Army" value="45" />
-  <Stat name="Navy" value="52" />
-  <Stat name="Defenses" value="87" />
-  <Stat name="Crime" value="72" />
+  <StatGroup class="col-span-12" title="Spirit" value={((100-72)+34+77+22)/4}>
+    <Stat name="Crime" value="72" inverse={true} />
+    <Stat name="Health" value="34" />
+    <Stat name="Morale" value="77" />
+    <Stat name="Reverence" value="22" />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Prosperity" value={(7+82+66+18)/4}>
+    <Stat name="Food" value="7" />
+    <Stat name="Resources" value="82" />
+    <Stat name="Trade" value="66" />
+    <Stat name="Wealth" value="18" />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Might" value={(45+52+87+39)/4}>
+    <Stat name="Army" value="45" />
+    <Stat name="Navy" value="52" />
+    <Stat name="Defenses" value="87" />
+    <Stat name="Population" value="39" />
+  </StatGroup>
 </StatGrid>
 
 ## Delta Stats

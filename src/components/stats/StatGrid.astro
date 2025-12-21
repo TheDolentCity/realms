@@ -1,11 +1,16 @@
 ---
+import { CssBuilder } from "../../utilities/css-builder";
 
+const { class: className } = Astro.props;
+
+const css = new CssBuilder()
+  .addClass("grid grid-cols-12 gap-8 lg:gap-8 mt-12 mb-16")
+  .addClass(className)
+  .build();
 ---
 
-<div class='not-content'>
-  <div
-    class='grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8 lg:gap-8 mt-12 mb-16'
-  >
+<div class="not-content">
+  <div class={css}>
     <slot />
   </div>
 </div>
