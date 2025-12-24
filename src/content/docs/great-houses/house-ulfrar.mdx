@@ -6,48 +6,117 @@ description: Details concerning House Ulfrar and its members.
 import Stat from "/src/components/stats/Stat.astro";
 import StatGrid from "/src/components/stats/StatGrid.astro";
 import StatGroup from "/src/components/stats/StatGroup.astro";
+import RealmOverview from "/src/components/stats/RealmOverview.astro";
 
-House Ulfrar is a Great House of Westmark and act as Wardens of [Barrowdell](/realms/barrowdell). They are distrusted by all, but none more so than House Ironwood. They have raided Frostwatch through the guise of outlaws for hundreds of years. The two houses are perpetually on the brink of all out war, leading to House Ulfrar maintaining a strong and reliable seat of power.
+{/* Spirit stats */}
+export const crime = 25;
+export const health = 40;
+export const morale = 21;
+export const reverence = 60;
+export const spirit = ((100 - crime) + health + morale + reverence) / 4;
 
-## Resources
+{/* Prosperity stats */}
+export const food = 42;
+export const resources = 19;
+export const trade = 35;
+export const wealth = 48;
+export const prosperity = (food + resources + trade + wealth) / 4;
 
-- **Coat of Arms**: A black boar on a red field.
-- **Religion**: [The Cairn Eternal](/setting/religion#the-cairn-eternal)
-- **Heir**: TBD
+{/* Might stats */}
+export const army = 86;
+export const navy = 15;
+export const defenses = 75;
+export const population = 37;
+export const might = (army + navy + defenses + population) / 4;
+
+{/* Disposition stats */}
+export const age = 0;
+export const romance = 69;
+export const toughness = 82;
+export const honor = 5;
+export const disposition = (romance + toughness + honor) / 3;
+
+{/* Skills stats */}
+export const education = 30;
+export const diplomacy = 14;
+export const intrigue = 54;
+export const warfare = 92;
+export const skills = (education + diplomacy + intrigue + warfare) / 4;
+
+{/* Seat of Power stats */}
+export const guards = 94;
+export const majesty = 20;
+export const structure = 60;
+export const supplies = 31;
+export const seatOfPower = (guards + majesty + structure + supplies) / 4;
+
+House Ulfrar is a Great House of Westmark and act as Wardens of Barrowdell. They are distrusted by all, but none more so than House Ironwood. They have raided Frostwatch through the guise of outlaws for hundreds of years. The two houses are perpetually on the brink of all out war, leading to House Ulfrar maintaining a strong and reliable seat of power.
+
+<RealmOverview
+  power={(spirit + prosperity + might + disposition + skills + seatOfPower) / 6}
+  coatOfArms="A black boar and yellow banner on a red field."
+  religions={[
+    { value: "The Cairn Eternal", link: "/setting/religion#the-cairn-eternal" }
+  ]}
+  heir={{ value: "TBD", link: "/great-houses/house-ulfrar#heir" }}
+  allies={[
+    { value: "None" }
+  ]}
+  enemies={[
+    { value: "House Ironwood", link: "/great-houses/house-ironwood" },
+    { value: "House Oldbeard", link: "/minor-houses/house-oldbeard" },
+  ]}
+  />
+
+## Realm | Barrowdell
+
+Barrowdell is a central region with a cold and wet climate. House Ulfrar has a long history of attacking neighboring realms or orchestrating raids that are later denounced for appearances sake. The realm is filled with mercenaries who believe [The Cairn Eternal](/setting/religion#the-cairn-eternal) has bestowed them with the divine right to pillage other realms. Thieves, highwaymen, and other criminals are forced into the army under threat of death.
+
+<StatGrid>
+  <StatGroup class="col-span-12" title="Spirit" value={spirit}>
+    <Stat name="Crime" value={crime} inverse={true} />
+    <Stat name="Health" value={health} />
+    <Stat name="Morale" value={morale} />
+    <Stat name="Reverence" value={reverence} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Prosperity" value={prosperity}>
+    <Stat name="Food" value={food} />
+    <Stat name="Resources" value={resources} />
+    <Stat name="Trade" value={trade} />
+    <Stat name="Wealth" value={wealth} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Might" value={might}>
+    <Stat name="Army" value={army} />
+    <Stat name="Navy" value={navy} />
+    <Stat name="Defenses" value={defenses} />
+    <Stat name="Population" value={population} />
+  </StatGroup>
+</StatGrid>
 
 ## Regent | Unnamed
 
 Regent Ulfrar is the Warden of the Barrowdell realm. The reputation of their ancestors precedes them: few trust an Ulfrar noble. However, their natural charisma, strength, and martial prowess cannot be overlooked.
 
 <StatGrid>
-  <StatGroup class="col-span-12" title="Disposition" value={(69 + 87 + 9) / 3}>
+  <StatGroup class="col-span-12" title="Disposition" value={disposition}>
     <Stat name="Age" value="??" colorless="true" />
-    <Stat name="Romance" value="69" />
-    <Stat name="Toughness" value="82" />
-    <Stat name="Honor" value="9" />
+    <Stat name="Romance" value={romance} />
+    <Stat name="Toughness" value={toughness} />
+    <Stat name="Honor" value={honor} />
   </StatGroup>
-  <StatGroup class="col-span-12" title="Skills" value={(42 + 14 + 54 + 92) / 4}>
-    <Stat name="Education" value="42" />
-    <Stat name="Diplomacy" value="14" />
-    <Stat name="Intrigue" value="54" />
-    <Stat name="Warfare" value="85" />
+  <StatGroup class="col-span-12" title="Skills" value={skills}>
+    <Stat name="Education" value={education} />
+    <Stat name="Diplomacy" value={diplomacy} />
+    <Stat name="Intrigue" value={intrigue} />
+    <Stat name="Warfare" value={warfare} />
   </StatGroup>
 </StatGrid>
 
 ## Seat of Power | Sarro Castle
 
-<StatGroup class="col-span-12" value={(94 + 43 + 60 + 49) / 4}>
-  <Stat name="Guards" value="94" />
-  <Stat name="Majesty" value="43" />
-  <Stat name="Structure" value="60" />
-  <Stat name="Supplies" value="49" />
+<StatGroup class="col-span-12" value={seatOfPower}>
+  <Stat name="Guards" value={guards} />
+  <Stat name="Majesty" value={majesty} />
+  <Stat name="Structure" value={structure} />
+  <Stat name="Supplies" value={supplies} />
 </StatGroup>
-
-### Allies
-
-None
-
-### Enemies
-
-- [House Ironwood](/great-houses/house-ironwood)
-- [House Oldbeard](/minor-houses/house-oldbeard)

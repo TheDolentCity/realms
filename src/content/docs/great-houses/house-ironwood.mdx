@@ -3,47 +3,120 @@ title: House Ironwood
 description: Details concerning House Ironwood and its members.
 ---
 
-import Stat from '/src/components/stats/Stat.astro';
-import StatGrid from '/src/components/stats/StatGrid.astro';
-import StatGroup from '/src/components/stats/StatGroup.astro';
+import Stat from "/src/components/stats/Stat.astro";
+import StatGrid from "/src/components/stats/StatGrid.astro";
+import StatGroup from "/src/components/stats/StatGroup.astro";
+import RealmOverview from "/src/components/stats/RealmOverview.astro";
+
+{/* Spirit stats */}
+export const crime = 72;
+export const health = 46;
+export const morale = 77;
+export const reverence = 39;
+export const spirit = ((100 - crime) + health + morale + reverence) / 4;
+
+{/* Prosperity stats */}
+export const food = 10;
+export const resources = 74;
+export const trade = 59;
+export const wealth = 41;
+export const prosperity = (food + resources + trade + wealth) / 4;
+
+{/* Might stats */}
+export const army = 60;
+export const navy = 52;
+export const defenses = 91;
+export const population = 34;
+export const might = (army + navy + defenses + population) / 4;
+
+{/* Disposition stats */}
+export const age = 0;
+export const romance = 34;
+export const toughness = 83;
+export const honor = 95;
+export const disposition = (romance + toughness + honor) / 3;
+
+{/* Skills stats */}
+export const education = 40;
+export const diplomacy = 31;
+export const intrigue = 5;
+export const warfare = 78;
+export const skills = (education + diplomacy + intrigue + warfare) / 4;
+
+{/* Seat of Power stats */}
+export const guards = 72;
+export const majesty = 51;
+export const structure = 96;
+export const supplies = 83;
+export const seatOfPower = (guards + majesty + structure + supplies) / 4;
 
 House Ironwood is a Great House of Westmark and act as Wardens of [Frostwatch](/realms/frostwatch). They rule over this vast region and are one of the oldest lineages. Their seat of power, Remheim, was one of the only castles that did not fall during Eastmark's invasion.
 
-- **Coat of Arms**: An ironwood tree and a harpoon head on a white banner.
-- **Religion**: [The Great Beasts](/setting/religion#the-great-beasts)
-- **Heir**: TBD
+<RealmOverview
+  power={(spirit + prosperity + might + disposition + skills + seatOfPower) / 6}
+  coatOfArms="An ironwood tree and a harpoon head on a white field."
+  religions={[
+    { value: "The Great Beasts", link: "/setting/religion#the-great-beasts" }
+  ]}
+  heir={{ value: "TBD", link: "/great-houses/house-ironwood#heir" }}
+  allies={[
+    { value: "House Aven", link: "/great-houses/house-aven" },
+    { value: "House Oldbeard", link: "/minor-houses/house-oldbeard" },
+  ]}
+  enemies={[
+    { value: "House Ulfrar", link: "/great-houses/house-ulfrar" },
+  ]}
+  />
+
+## Realm | Frostwatch
+
+Frostwatch is a cold northern land. The conditions are harsh and make it difficult to grow food, but plenty of natural resources like timber, stone, and whale oil draws many traders. Remheim, the seat of power, is a massive castle with a keep second only in size to that of Dawnstone. The people who live here may seem bitter to outsiders, but many of them have found peace in this land and they are used to extreme hardship. However, many resort to theft and robbery in order to obtain food. Brigands often attack on the road.
+
+<StatGrid>
+  <StatGroup class="col-span-12" title="Spirit" value={spirit}>
+    <Stat name="Crime" value={crime} inverse={true} />
+    <Stat name="Health" value={health} />
+    <Stat name="Morale" value={morale} />
+    <Stat name="Reverence" value={reverence} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Prosperity" value={prosperity}>
+    <Stat name="Food" value={food} />
+    <Stat name="Resources" value={resources} />
+    <Stat name="Trade" value={trade} />
+    <Stat name="Wealth" value={wealth} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Might" value={might}>
+    <Stat name="Army" value={army} />
+    <Stat name="Navy" value={navy} />
+    <Stat name="Defenses" value={defenses} />
+    <Stat name="Population" value={population} />
+  </StatGroup>
+</StatGrid>
 
 ## Regent | Unnamed
 
 Regent Ironwood is the Warden of the Frostwatch realm. Ironwood Nobles are regarded as honorable and pragmatic leaders. Trained in swordcraft, tactics, and history from a young age, they'll do whatever it takes to feed their people.
 
 <StatGrid>
-  <StatGroup class="col-span-12" title="Disposition" value={(34+83+88)/3}>
+  <StatGroup class="col-span-12" title="Disposition" value={disposition}>
     <Stat name="Age" value="??" colorless="true" />
-    <Stat name="Romance" value="34" />
-    <Stat name="Toughness" value="83" />
-    <Stat name="Honor" value="88" />
+    <Stat name="Romance" value={romance} />
+    <Stat name="Toughness" value={toughness} />
+    <Stat name="Honor" value={honor} />
   </StatGroup>
-  <StatGroup class="col-span-12" title="Skills" value={(40+31+2+78)/4}>
-    <Stat name="Education" value="40" />
-    <Stat name="Diplomacy" value="31" />
-    <Stat name="Intrigue" value="2" />
-    <Stat name="Warfare" value="78" />
+  <StatGroup class="col-span-12" title="Skills" value={skills}>
+    <Stat name="Education" value={education} />
+    <Stat name="Diplomacy" value={diplomacy} />
+    <Stat name="Intrigue" value={intrigue} />
+    <Stat name="Warfare" value={warfare} />
   </StatGroup>
 </StatGrid>
 
 ## Seat of Power | Remheim Castle
 
-<StatGroup class="col-span-12" value={(72+51+96+83)/4}>
-  <Stat name="Guards" value="72" />
-  <Stat name="Majesty" value="51" />
-  <Stat name="Structure" value="96" />
-  <Stat name="Supplies" value="83" />
+<StatGroup class="col-span-12" value={seatOfPower}>
+  <Stat name="Guards" value={guards} />
+  <Stat name="Majesty" value={majesty} />
+  <Stat name="Structure" value={structure} />
+  <Stat name="Supplies" value={supplies} />
 </StatGroup>
-
-## Allies
-- [House Aven](/great-houses/house-aven)
-- [House Oldbeard](/minor-houses/house-oldbeard)
-
-## Enemies
-- [House Ulfrar](/great-houses/house-ulfrar)

@@ -1,51 +1,125 @@
 ---
 title: House Aven
-description: Details concerning House Aven and its members.
+description: Details concerning House Aven.
 ---
 
-import Stat from '/src/components/stats/Stat.astro';
-import StatGrid from '/src/components/stats/StatGrid.astro';
-import StatGroup from '/src/components/stats/StatGroup.astro';
+import Stat from "/src/components/stats/Stat.astro";
+import StatGrid from "/src/components/stats/StatGrid.astro";
+import StatGroup from "/src/components/stats/StatGroup.astro";
+import RealmOverview from "/src/components/stats/RealmOverview.astro";
 
-House Aven is a Great House of Westmark and act as Wardens of [Misthaven](/realms/misthaven). They rule over this vast region and are one of the oldest lineages. Their seat of power, Northstar, fell during Eastmark's invasion. Most families in the land, great and minor, were wiped out during this invasion.
+{/* Spirit stats */}
+export const crime = 11;
+export const health = 89;
+export const morale = 63;
+export const reverence = 76;
+export const spirit = ((100 - crime) + health + morale + reverence) / 4;
 
-- **Coat of Arms**: A woman with black hair weeping and covering her eyes on a blue banner.
-- **Religion**: [The Great Beasts](/setting/religion#the-great-beasts) and [The King of Fog](/setting/religion#the-king-of-fog)
-- **Heir**: TBD
+{/* Prosperity stats */}
+export const food = 35;
+export const resources = 48;
+export const trade = 29;
+export const wealth = 24;
+export const prosperity = (food + resources + trade + wealth) / 4;
+
+{/* Might stats */}
+export const army = 17;
+export const navy = 6;
+export const defenses = 14;
+export const population = 52;
+export const might = (army + navy + defenses + population) / 4;
+
+{/* Disposition stats */}
+export const age = 0;
+export const romance = 94;
+export const toughness = 31;
+export const honor = 51;
+export const disposition = (romance + toughness + honor) / 3;
+
+{/* Skills stats */}
+export const education = 61;
+export const diplomacy = 86;
+export const intrigue = 50;
+export const warfare = 8;
+export const skills = (education + diplomacy + intrigue + warfare) / 4;
+
+{/* Seat of Power stats */}
+export const guards = 33;
+export const majesty = 17;
+export const structure = 9;
+export const supplies = 58;
+export const seatOfPower = (guards + majesty + structure + supplies) / 4;
+
+House Aven is a Great House of Westmark and act as Wardens of Misthaven. They rule over this vast region and are one of the oldest lineages. Their seat of power, Northstar, fell during Eastmark's invasion. Most families in the land, great and minor, were wiped out during this invasion.
+
+<RealmOverview
+  power={(spirit + prosperity + might + disposition + skills + seatOfPower) / 6}
+  coatOfArms="A weeping, black-haired woman covering her eyes on a blue field."
+  religions={[
+    { value: "The Great Beasts", link: "/setting/religion#the-great-beasts" },
+    { value: "The King of Fog", link: "/setting/religion#the-king-of-fog" }
+  ]}
+  heir={{ value: "TBD", link: "/great-houses/house-langloom#heir" }}
+  allies={[
+    { value: "House Ironwood", link: "/great-houses/house-ironwood" },
+    { value: "House Berrefen", link: "/minor-houses/house-berrefen" },
+    { value: "House Oldbeard", link: "/minor-houses/house-oldbeard" },
+  ]}
+  enemies={[
+    { value: "House Langloom", link: "/great-houses/house-langloom" },
+    { value: "House Astar", link: "/minor-houses/house-astar" },
+  ]}
+  />
+
+## Realm | Misthaven
+
+Misthaven is a large, northern land dominated by the Great Lake. The eastern part of the realm supposedly connects to Eastmark, but a fog lies upon that place and none who venture there return. The people who live here believe the water of this land is blessed by the Great Beasts, restoring the health of the elderly and frail. There is a deep sadness in the land though. Almost the entire population died when Eastmark invaded. The land is filled with bones and bogs. A nefarious cult believes the [King of Fog](/setting/religion#the-king-of-fog) will one day return from the East and conquer Westmark as a God King.
+
+<StatGrid>
+  <StatGroup class="col-span-12" title="Spirit" value={spirit}>
+    <Stat name="Crime" value={crime} inverse={true} />
+    <Stat name="Health" value={health} />
+    <Stat name="Morale" value={morale} />
+    <Stat name="Reverence" value={reverence} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Prosperity" value={prosperity}>
+    <Stat name="Food" value={food} />
+    <Stat name="Resources" value={resources} />
+    <Stat name="Trade" value={trade} />
+    <Stat name="Wealth" value={wealth} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Might" value={might}>
+    <Stat name="Army" value={army} />
+    <Stat name="Navy" value={navy} />
+    <Stat name="Defenses" value={defenses} />
+    <Stat name="Population" value={population} />
+  </StatGroup>
+</StatGrid>
 
 ## Regent | Unnamed
 
 Regent Aven is the Warden of the Misthaven realm. Since House Aven relies on trade with their political enemies, House Langloom and House Astar, Aven nobles are trained from a young age in romance and diplomacy to keep such trade flowing.
 
 <StatGrid>
-  <StatGroup class="col-span-12" title="Disposition" value={(89+31+45)/3}>
+  <StatGroup class="col-span-12" title="Disposition" value={disposition}>
     <Stat name="Age" value="??" colorless="true" />
-    <Stat name="Romance" value="89" />
-    <Stat name="Toughness" value="31" />
-    <Stat name="Honor" value="45" />
+    <Stat name="Romance" value={romance} />
+    <Stat name="Toughness" value={toughness} />
+    <Stat name="Honor" value={honor} />
   </StatGroup>
-  <StatGroup class="col-span-12" title="Skills" value={(61+81+40+8)/4}>
-    <Stat name="Education" value="61" />
-    <Stat name="Diplomacy" value="81" />
-    <Stat name="Intrigue" value="40" />
-    <Stat name="Warfare" value="8" />
+  <StatGroup class="col-span-12" title="Skills" value={skills}>
+    <Stat name="Education" value={education} />
+    <Stat name="Diplomacy" value={diplomacy} />
+    <Stat name="Intrigue" value={intrigue} />
+    <Stat name="Warfare" value={warfare} />
   </StatGroup>
 </StatGrid>
 
 ## Seat of Power | Northstar Castle
 
-<StatGroup class="col-span-12" value={(33+17+9+58)/4}>
-  <Stat name="Guards" value="33" />
-  <Stat name="Majesty" value="17" />
-  <Stat name="Structure" value="9" />
-  <Stat name="Supplies" value="58" />
+<StatGroup class="col-span-12" value={seatOfPower}>
+  <Stat name="Guards" value={guards} />
+  <Stat name="Majesty" value={majesty} />
+  <Stat name="Structure" value={structure} />
+  <Stat name="Supplies" value={supplies} />
 </StatGroup>
-
-## Allies
-- [House Ironwood](/great-houses/house-ironwood)
-- [House Oldbeard](/minor-houses/house-oldbeard)
-- [House Berrefen](/minor-houses/house-berrefen)
-
-## Enemies
-- [House Langloom](/great-houses/house-langloom)
-- [House Astar](/minor-houses/house-astar)
