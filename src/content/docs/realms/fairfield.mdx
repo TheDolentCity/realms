@@ -12,31 +12,22 @@ import StatGroup from '/src/components/stats/StatGroup.astro';
 TODO
 
 <StatGrid>
-  <StatGroup class="col-span-12" title="Spirit" value={((100-22)+48+55+36)/4}>
-    <Stat name="Crime" value="22" inverse={true} />
+  <StatGroup class="col-span-12" title="Spirit" value={((100-38)+48+55+36)/4}>
+    <Stat name="Crime" value="38" inverse={true} />
     <Stat name="Health" value="48" />
     <Stat name="Morale" value="55" />
     <Stat name="Reverence" value="36" />
   </StatGroup>
-  <StatGroup class="col-span-12" title="Prosperity" value={(44+57+91+95)/4}>
+  <StatGroup class="col-span-12" title="Prosperity" value={(44+57+80+95)/4}>
     <Stat name="Food" value="44" />
     <Stat name="Resources" value="57" />
-    <Stat name="Trade" value="91" />
+    <Stat name="Trade" value="80" />
     <Stat name="Wealth" value="95" />
   </StatGroup>
-  <StatGroup class="col-span-12" title="Might" value={(72+2+35+72)/4}>
-    <Stat name="Army" value="72" />
-    <Stat name="Navy" value="2" />
-    <Stat name="Defenses" value="35" />
-    <Stat name="Population" value="72" />
+  <StatGroup class="col-span-12" title="Might" value={(68+12+47+61)/4}>
+    <Stat name="Army" value="68" />
+    <Stat name="Navy" value="12" />
+    <Stat name="Defenses" value="47" />
+    <Stat name="Population" value="61" />
   </StatGroup>
-</StatGrid>
-
-## Delta Stats
-Every turn, this realm's stats change by the following amounts:
-<StatGrid>
-  <Stat name="Morale" value="+2" />
-  <Stat name="Wealth" value="+1" />
-  <Stat name="Crime" value="+1" />
-  <Stat name="Reverence" value="-2" />
 </StatGrid>

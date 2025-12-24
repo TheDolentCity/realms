@@ -3,20 +3,127 @@ title: House Langloom
 description: Details concerning House Langloom and its members.
 ---
 
-House Langloom is a Great House of Westmark and act as Wardens of Greenhold.
+import Stat from "/src/components/stats/Stat.astro";
+import StatGrid from "/src/components/stats/StatGrid.astro";
+import StatGroup from "/src/components/stats/StatGroup.astro";
+import RealmOverview from "/src/components/stats/RealmOverview.astro";
 
-## Resources
-- **Coat of Arms**: TODO.
-- **Seat of Power**: [Veridune](/seats-of-power/veridune)
-- **Regent**: [Regent Langloom](/regents/regent-langloom)
-- **Heir**: TBD
-- **Religion**: TODO
+{/* Spirit stats */}
+export const crime = 18;
+export const health = 76;
+export const morale = 71;
+export const reverence = 34;
+export const spirit = ((100 - crime) + health + morale + reverence) / 4;
+
+{/* Prosperity stats */}
+export const food = 95;
+export const resources = 49;
+export const trade = 86;
+export const wealth = 63;
+export const prosperity = (food + resources + trade + wealth) / 4;
+
+{/* Might stats */}
+export const army = 24;
+export const navy = 17;
+export const defenses = 9;
+export const population = 80;
+export const might = (army + navy + defenses + population) / 4;
+
+{/* Disposition stats */}
+export const age = 0;
+export const romance = 62;
+export const toughness = 41;
+export const honor = 68;
+export const disposition = (romance + toughness + honor) / 3;
+
+{/* Skills stats */}
+export const education = 90;
+export const diplomacy = 73;
+export const intrigue = 55;
+export const warfare = 25;
+export const skills = (education + diplomacy + intrigue + warfare) / 4;
+
+{/* Seat of Power stats */}
+export const guards = 41;
+export const majesty = 75;
+export const structure = 63;
+export const supplies = 99;
+export const seatOfPower = (guards + majesty + structure + supplies) / 4;
+
+House Langloom is a Great House of Westmark and act as Wardens of Greenhold. As it includes both the Northern and Southern Kingswood, Greenhold is the largest realm in Westmark. At its southern border lies Dawnstone and the closest allies of House Langloom, House Imperion.
+
+<RealmOverview
+  power={(spirit + prosperity + might + disposition + skills + seatOfPower) / 6}
+  coatOfArms="A yellow rose with red thorns held by a hand over a green field."
+  religions={[
+    { value: "The Sundered God", link: "/setting/religion#the-sundered-god" }
+  ]}
+  heir={{ value: "TBD", link: "/great-houses/house-langloom#heir" }}
+  allies={[
+    { value: "House Imperium", link: "/great-houses/house-imperion" },
+  ]}
+  enemies={[
+    { value: "No known enemies, but general resentment grows concerning the apparent alliance between House Langloom and House Imperion to trade the crown back and forth." }
+  ]}
+  />
+
+## Realm | Greenhold
+
+Greenhold is a large, eastern realm of temperate climate. Large sections of the land are encompassed by the Northern Kingswood, but everything else is farmland. The bounty of the land is great and the people never go hungry. Many other realms rely on Greenhold's food trade to survive. House Langloom has few enemies as a result of this trade, and many of their defenses have fallen into disrepair as a result.
+
+<StatGrid>
+  <StatGroup class="col-span-12" title="Spirit" value={spirit}>
+    <Stat name="Crime" value={crime} inverse={true} />
+    <Stat name="Health" value={health} />
+    <Stat name="Morale" value={morale} />
+    <Stat name="Reverence" value={reverence} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Prosperity" value={prosperity}>
+    <Stat name="Food" value={food} />
+    <Stat name="Resources" value={resources} />
+    <Stat name="Trade" value={trade} />
+    <Stat name="Wealth" value={wealth} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Might" value={might}>
+    <Stat name="Army" value={army} />
+    <Stat name="Navy" value={navy} />
+    <Stat name="Defenses" value={defenses} />
+    <Stat name="Population" value={population} />
+  </StatGroup>
+</StatGrid>
+
+## Regent | TBD
+
+Langloom Nobles focus on a practical education for managing accounts, trade, and enforcing laws. All of which are useful skills for managing the kingdom of Westmark.
+
+<StatGrid>
+  <StatGroup class="col-span-12" title="Disposition" value={disposition}>
+    <Stat name="Age" value="??" colorless="true" />
+    <Stat name="Romance" value={romance} />
+    <Stat name="Toughness" value={toughness} />
+    <Stat name="Honor" value={honor} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Skills" value={skills}>
+    <Stat name="Education" value={education} />
+    <Stat name="Diplomacy" value={diplomacy} />
+    <Stat name="Intrigue" value={intrigue} />
+    <Stat name="Warfare" value={warfare} />
+  </StatGroup>
+</StatGrid>
+
+## Seat of Power | Veridune Castle
+
+<StatGroup class="col-span-12" value={seatOfPower}>
+  <Stat name="Guards" value={guards} />
+  <Stat name="Majesty" value={majesty} />
+  <Stat name="Structure" value={structure} />
+  <Stat name="Supplies" value={supplies} />
+</StatGroup>
 
 ### Allies
+
 - [House Imperion](/great-houses/house-imperion)
 
 ### Enemies
-TODO
 
-## Members
-TBD
+No known enemies, but general resentment grows concerning the apparent alliance between House Langloom and House Imperion to trade the crown back and forth.

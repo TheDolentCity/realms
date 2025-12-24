@@ -3,20 +3,46 @@ title: House Imperion
 description: Details concerning House Imperion and its members.
 ---
 
-House Imperion is a Great House of Westmark and act as Wardens of Fairfield.
+import Stat from "/src/components/stats/Stat.astro";
+import StatGrid from "/src/components/stats/StatGrid.astro";
+import StatGroup from "/src/components/stats/StatGroup.astro";
 
-## Resources
-- **Coat of Arms**: A severed woman's arm on a red banner.
-- **Seat of Power**: [Donohan](/seats-of-power/donohan)
-- **Regent**: [Regent Imperion](/regents/regent-imperion)
+House Imperion is a Great House of Westmark and act as Wardens of [Fairfield](/realms/fairfield). King Cassandra was a member of House Imperion and responsible for the unification of Westmark. House Imperion protects her legacy and has produced several strong kings after her. Though many grow weary of House Imperion's apparent alliance with House Langloom.
+
+- **Coat of Arms**: A severed woman's arm over a yellow crown on a dark red banner.
+- **Religion**: [The Sundered God](/setting/religion#the-sundered-god)
 - **Heir**: TBD
-- **Religion**: TODO
+
+## Regent | Unnamed
+
+Regent Imperion is the Warden of the Fairfield realm. Imperion Nobles have been groomed for 
+
+<StatGrid>
+  <StatGroup class="col-span-12" title="Disposition" value={(34 + 59 + 72) / 3}>
+    <Stat name="Age" value="??" colorless="true" />
+    <Stat name="Romance" value="34" />
+    <Stat name="Toughness" value="59" />
+    <Stat name="Honor" value="72" />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Skills" value={(71 + 68 + 20 + 65) / 4}>
+    <Stat name="Education" value="71" />
+    <Stat name="Diplomacy" value="68" />
+    <Stat name="Intrigue" value="20" />
+    <Stat name="Warfare" value="65" />
+  </StatGroup>
+</StatGrid>
+
+## Seat of Power | Donohan Castle
+
+<StatGroup class="col-span-12" value={(50 + 94 + 73 + 42) / 4}>
+  <Stat name="Guards" value="50" />
+  <Stat name="Majesty" value="94" />
+  <Stat name="Structure" value="43" />
+  <Stat name="Supplies" value="42" />
+</StatGroup>
 
 ### Allies
 - [House Langloom](/great-houses/house-langloom)
 
 ### Enemies
 - [House Ashcroft](/great-houses/house-ashcroft)
-
-## Members
-TBD

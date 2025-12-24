@@ -1,0 +1,85 @@
+---
+import {
+  HandFist,
+  Handshake,
+  Crown,
+  ShieldHalf,
+  Sparkle,
+} from "@lucide/astro";
+import Stat from "./Stat.astro";
+
+interface Hyperlink {
+  value: string;
+  link: string;
+}
+
+interface Props {
+  power: number;
+  coatOfArms: string;
+  religions: Hyperlink[];
+  heir: Hyperlink;
+  allies: Hyperlink[];
+  enemies: Hyperlink[];
+}
+
+const { power, coatOfArms, religions, heir, allies, enemies } = Astro.props;
+
+const value = Math.round(power);
+---
+
+<div
+  class="not-content flex gap-6 p-4 border rounded-xl items-start border-(--sl-color-hairline) bg-(--sl-color-bg-sidebar)/50"
+>
+  <Stat name="Power" value={value} />
+  <table>
+    <tbody>
+      <tr>
+        <td class="flex gap-1.5 pr-4 items-center font-semibold text-(--sl-color-white) text-nowrap">
+          <ShieldHalf size={20} class="text-accent-400" /> Coat of Arms
+        </td>
+        <td>{coatOfArms}</td>
+      </tr>
+      <tr>
+        <td class="flex gap-1.5 pr-4 items-center font-semibold text-(--sl-color-white) text-nowrap">
+          <Sparkle size={20} class="text-accent-400" /> Religions
+        </td>
+        <td>
+          {religions.map((religion, i) =>
+            <a href={religion.link}>{religion.value}</a>
+            <span class="font-semibold">{i + 1 < religions.length ? "| " : ""}</span>
+          )}
+        </td>
+      </tr>
+      <tr>
+        <td class="flex gap-1.5 pr-4 items-center font-semibold text-(--sl-color-white) text-nowrap">
+          <Crown size={20} class="text-accent-400" /> Heir
+        </td>
+        <td>
+          <a href={heir.link}>{heir.value}</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="flex gap-1.5 pr-4 items-center font-semibold text-(--sl-color-white) text-nowrap">
+          <Handshake size={20} class="text-accent-400" /> Allies
+        </td>
+        <td>
+          {allies.map((ally, i) =>
+            <a href={ally.link}>{ally.value}</a>
+            <span class="font-semibold">{i + 1 < allies.length ? "| " : ""}</span>
+          )}
+        </td>
+      </tr>
+      <tr>
+        <td class="flex gap-1.5 pr-4 items-center font-semibold text-(--sl-color-white) text-nowrap">
+          <HandFist size={20} class="text-accent-400" /> Enemies
+        </td>
+        <td>
+          {enemies.map((enemy, i) =>
+            <a href={enemy.link}>{enemy.value}</a>
+            <span class="font-semibold">{i + 1 < enemies.length ? "| " : ""}</span>
+          )}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

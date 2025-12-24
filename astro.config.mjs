@@ -61,20 +61,6 @@ export default defineConfig({
           },
         },
         {
-          label: "Regents",
-          collapsed: true,
-          autogenerate: {
-            directory: "regents",
-          },
-        },
-        {
-          label: "Stewards",
-          collapsed: true,
-          autogenerate: {
-            directory: "stewards",
-          },
-        },
-        {
           label: "Great Houses",
           collapsed: true,
           autogenerate: {
@@ -86,20 +72,6 @@ export default defineConfig({
           collapsed: true,
           autogenerate: {
             directory: "minor-houses",
-          },
-        },
-        {
-          label: "Seats of Power",
-          collapsed: true,
-          autogenerate: {
-            directory: "seats-of-power",
-          },
-        },
-        {
-          label: "Burgs",
-          collapsed: true,
-          autogenerate: {
-            directory: "burgs",
           },
         },
       ],

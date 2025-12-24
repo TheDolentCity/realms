@@ -3,23 +3,49 @@ title: House Aven
 description: Details concerning House Aven and its members.
 ---
 
-House Aven is a Great House of Westmark and act as Wardens of Misthaven. They rule over this vast region and are one of the oldest lineages. Their seat of power, Northstar, fell during Eastmark's invasion. Most families in the land, great and minor, were wiped out during this invasion.
+import Stat from '/src/components/stats/Stat.astro';
+import StatGrid from '/src/components/stats/StatGrid.astro';
+import StatGroup from '/src/components/stats/StatGroup.astro';
 
-## Resources
+House Aven is a Great House of Westmark and act as Wardens of [Misthaven](/realms/misthaven). They rule over this vast region and are one of the oldest lineages. Their seat of power, Northstar, fell during Eastmark's invasion. Most families in the land, great and minor, were wiped out during this invasion.
+
 - **Coat of Arms**: A woman with black hair weeping and covering her eyes on a blue banner.
-- **Seat of Power**: [Northstar](/seats-of-power/northstar)
-- **Regent**: [Regent Aven](/regents/regent-aven)
-- **Heir**: None
 - **Religion**: [The Great Beasts](/setting/religion#the-great-beasts) and [The King of Fog](/setting/religion#the-king-of-fog)
+- **Heir**: TBD
 
-### Allies
+## Regent | Unnamed
+
+Regent Aven is the Warden of the Misthaven realm. Since House Aven relies on trade with their political enemies, House Langloom and House Astar, Aven nobles are trained from a young age in romance and diplomacy to keep such trade flowing.
+
+<StatGrid>
+  <StatGroup class="col-span-12" title="Disposition" value={(89+31+45)/3}>
+    <Stat name="Age" value="??" colorless="true" />
+    <Stat name="Romance" value="89" />
+    <Stat name="Toughness" value="31" />
+    <Stat name="Honor" value="45" />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Skills" value={(61+81+40+8)/4}>
+    <Stat name="Education" value="61" />
+    <Stat name="Diplomacy" value="81" />
+    <Stat name="Intrigue" value="40" />
+    <Stat name="Warfare" value="8" />
+  </StatGroup>
+</StatGrid>
+
+## Seat of Power | Northstar Castle
+
+<StatGroup class="col-span-12" value={(33+17+9+58)/4}>
+  <Stat name="Guards" value="33" />
+  <Stat name="Majesty" value="17" />
+  <Stat name="Structure" value="9" />
+  <Stat name="Supplies" value="58" />
+</StatGroup>
+
+## Allies
 - [House Ironwood](/great-houses/house-ironwood)
 - [House Oldbeard](/minor-houses/house-oldbeard)
 - [House Berrefen](/minor-houses/house-berrefen)
 
-### Enemies
+## Enemies
 - [House Langloom](/great-houses/house-langloom)
 - [House Astar](/minor-houses/house-astar)
-
-## Members
-TODO

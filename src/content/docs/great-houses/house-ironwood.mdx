@@ -3,21 +3,47 @@ title: House Ironwood
 description: Details concerning House Ironwood and its members.
 ---
 
-House Ironwood is a Great House of Westmark and act as Wardens of Frostwatch. They rule over this vast region and are one of the oldest lineages. Their seat of power, Remheim, was one of the only castles that did not fall during Eastmark's invasion five hundred years ago.
+import Stat from '/src/components/stats/Stat.astro';
+import StatGrid from '/src/components/stats/StatGrid.astro';
+import StatGroup from '/src/components/stats/StatGroup.astro';
 
-## Resources
+House Ironwood is a Great House of Westmark and act as Wardens of [Frostwatch](/realms/frostwatch). They rule over this vast region and are one of the oldest lineages. Their seat of power, Remheim, was one of the only castles that did not fall during Eastmark's invasion.
+
 - **Coat of Arms**: An ironwood tree and a harpoon head on a white banner.
-- **Seat of Power**: [Remheim](/seats-of-power/remheim)
-- **Regent**: [Regent Ironwood](/regents/regent-ironwood)
-- **Heir**: None
 - **Religion**: [The Great Beasts](/setting/religion#the-great-beasts)
+- **Heir**: TBD
 
-### Allies
+## Regent | Unnamed
+
+Regent Ironwood is the Warden of the Frostwatch realm. Ironwood Nobles are regarded as honorable and pragmatic leaders. Trained in swordcraft, tactics, and history from a young age, they'll do whatever it takes to feed their people.
+
+<StatGrid>
+  <StatGroup class="col-span-12" title="Disposition" value={(34+83+88)/3}>
+    <Stat name="Age" value="??" colorless="true" />
+    <Stat name="Romance" value="34" />
+    <Stat name="Toughness" value="83" />
+    <Stat name="Honor" value="88" />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Skills" value={(40+31+2+78)/4}>
+    <Stat name="Education" value="40" />
+    <Stat name="Diplomacy" value="31" />
+    <Stat name="Intrigue" value="2" />
+    <Stat name="Warfare" value="78" />
+  </StatGroup>
+</StatGrid>
+
+## Seat of Power | Remheim Castle
+
+<StatGroup class="col-span-12" value={(72+51+96+83)/4}>
+  <Stat name="Guards" value="72" />
+  <Stat name="Majesty" value="51" />
+  <Stat name="Structure" value="96" />
+  <Stat name="Supplies" value="83" />
+</StatGroup>
+
+## Allies
 - [House Aven](/great-houses/house-aven)
 - [House Oldbeard](/minor-houses/house-oldbeard)
 
-### Enemies
+## Enemies
 - [House Ulfrar](/great-houses/house-ulfrar)
-
-## Members
-TODO

@@ -3,21 +3,51 @@ title: House Ulfrar
 description: Details concerning House Ulfrar and its members.
 ---
 
-House Ulfrar is a Great House of Westmark and act as Wardens of Barrowdell.
+import Stat from "/src/components/stats/Stat.astro";
+import StatGrid from "/src/components/stats/StatGrid.astro";
+import StatGroup from "/src/components/stats/StatGroup.astro";
+
+House Ulfrar is a Great House of Westmark and act as Wardens of [Barrowdell](/realms/barrowdell). They are distrusted by all, but none more so than House Ironwood. They have raided Frostwatch through the guise of outlaws for hundreds of years. The two houses are perpetually on the brink of all out war, leading to House Ulfrar maintaining a strong and reliable seat of power.
 
 ## Resources
-- **Coat of Arms**: TODO.
-- **Seat of Power**: [Sarro](/seats-of-power/sarro)
-- **Regent**: [Regent Ulfrar](/regents/regent-ulfrar)
+
+- **Coat of Arms**: A black boar on a red field.
+- **Religion**: [The Cairn Eternal](/setting/religion#the-cairn-eternal)
 - **Heir**: TBD
-- **Religion**: TODO
+
+## Regent | Unnamed
+
+Regent Ulfrar is the Warden of the Barrowdell realm. The reputation of their ancestors precedes them: few trust an Ulfrar noble. However, their natural charisma, strength, and martial prowess cannot be overlooked.
+
+<StatGrid>
+  <StatGroup class="col-span-12" title="Disposition" value={(69 + 87 + 9) / 3}>
+    <Stat name="Age" value="??" colorless="true" />
+    <Stat name="Romance" value="69" />
+    <Stat name="Toughness" value="82" />
+    <Stat name="Honor" value="9" />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Skills" value={(42 + 14 + 54 + 92) / 4}>
+    <Stat name="Education" value="42" />
+    <Stat name="Diplomacy" value="14" />
+    <Stat name="Intrigue" value="54" />
+    <Stat name="Warfare" value="85" />
+  </StatGroup>
+</StatGrid>
+
+## Seat of Power | Sarro Castle
+
+<StatGroup class="col-span-12" value={(94 + 43 + 60 + 49) / 4}>
+  <Stat name="Guards" value="94" />
+  <Stat name="Majesty" value="43" />
+  <Stat name="Structure" value="60" />
+  <Stat name="Supplies" value="49" />
+</StatGroup>
 
 ### Allies
+
 None
 
 ### Enemies
+
 - [House Ironwood](/great-houses/house-ironwood)
 - [House Oldbeard](/minor-houses/house-oldbeard)
-
-## Members
-TBD

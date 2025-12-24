@@ -9,39 +9,43 @@ interface Props {
 
 const { value, title, class: className } = Astro.props;
 
-const saturate = Math.abs(value - 50) * 5;
+const saturate = Math.abs(value - 50) * 4;
 const gradientCss = new CssBuilder()
   .addClass(
-    "not-content grow h-6 border-2 rounded rounded-br-none justify-between items-center bg-linear-to-r text-zinc-100"
+    "not-content w-full h-1.5 rounded justify-start bg-linear-to-r text-zinc-100"
   )
   .addClass(
-    "border-green-600 text-green-100 from-green-700 via-green-800 to-green-950/50 from-0% via-70% to-90%",
+    "from-green-400 via-green-300 to-green-200/50 dark:from-green-700 dark:via-green-800 dark:to-green-950/50 from-0% via-70% to-90%",
     value >= 80
   )
   .addClass(
-    "border-green-600 text-green-100 from-green-700 via-green-800 to-green-950/75 from-0% via-40% to-80%",
+    "from-green-400 via-green-300 to-green-200/25 dark:from-green-700 dark:via-green-800 dark:to-green-950/25 from-0% via-40% to-80%",
     value < 80 && value >= 40
   )
   .addClass(
-    "border-amber-600 text-amber-100 from-amber-700 via-amber-800 to-amber-950/75 from-0% via-20% to-40%",
+    "from-amber-400 via-amber-300 to-amber-200/25 dark:from-amber-700 dark:via-amber-800 dark:to-amber-950/25 from-0% via-20% to-40%",
     value < 40 && value >= 20
   )
   .addClass(
-    "border-red-600 text-red-400 from-red-700 via-red-800 to-red-950/75 from-0% via-10% to-20%",
+    "from-red-400 via-red-300 to-red-200/25 dark:from-red-700 dark:via-red-800 dark:to-red-950/25 from-0% via-10% to-20%",
     value < 20
   )
   .build();
 ---
 
 <div class={className}>
-  <div class="flex gap-2 pb-1 items-center">
-    <span class="flex-none text-2xl text-[--sl-color-white]">
-      {title}
-    </span>
+  <div class="pb-1.5 items-center">
+    {
+      title && (
+        <div class="pl-1 pb-2.5 text-3xl leading-none text-[--sl-color-white]!">
+          {title}
+        </div>
+      )
+    }
     <div class={gradientCss} style={{ filter: `saturate(${saturate}%)` }}></div>
   </div>
   <div
-    class="not-content flex flex-wrap gap-3 p-4 border-2 rounded-lg rounded-tr-none justify-between items-center border-zinc-800 bg-zinc-950/50"
+    class="not-content flex flex-wrap gap-3 p-4 mt-0 border rounded-b-xl justify-between items-center border-(--sl-color-hairline) bg-(--sl-color-bg-sidebar)/50"
   >
     <slot />
   </div>

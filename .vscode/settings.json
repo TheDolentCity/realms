@@ -12,5 +12,6 @@
     "Westmark"
   ],
   "editor.wordWrap": "on",
-  "cSpell.enabled": true
+  "cSpell.enabled": true,
+  "editor.tabSize": 2
 }

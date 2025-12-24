@@ -47,6 +47,10 @@ Make a health check. On a failure, there was a miscarriage. Otherwise, in nine t
 
 Propose a large construction project, such as a road, a castle, or several ships. This may increase realm stats, such as trade, defenses, or navy, but will always cost a significant amount of resources and may cost several realm tokens as well.
 
+## Train (1)
+
+Spend significant time working to improve yourself. This usually increases one or two regent stats.
+
 ## Trade (1)
 
 Engage in diplomacy and trade with existing trade routes. This usually requires a trade check. The degree of success will determine how much food, resources, and wealth you gain.
