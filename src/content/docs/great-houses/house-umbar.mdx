@@ -3,20 +3,120 @@ title: House Umbar
 description: Details concerning House Umbar and its members.
 ---
 
+import Stat from "/src/components/stats/Stat.astro";
+import StatGrid from "/src/components/stats/StatGrid.astro";
+import StatGroup from "/src/components/stats/StatGroup.astro";
+import RealmOverview from "/src/components/stats/RealmOverview.astro";
+
+{/* Spirit stats */}
+export const crime = 62;
+export const health = 49;
+export const morale = 30;
+export const reverence = 9;
+export const spirit = ((100 - crime) + health + morale + reverence) / 4;
+
+{/* Prosperity stats */}
+export const food = 50;
+export const resources = 37;
+export const trade = 21;
+export const wealth = 89;
+export const prosperity = (food + resources + trade + wealth) / 4;
+
+{/* Might stats */}
+export const army = 82;
+export const navy = 81;
+export const defenses = 31;
+export const population = 39;
+export const might = (army + navy + defenses + population) / 4;
+
+{/* Disposition stats */}
+export const age = 0;
+export const romance = 48;
+export const toughness = 70;
+export const honor = 27;
+export const disposition = (romance + toughness + honor) / 3;
+
+{/* Skills stats */}
+export const education = 47;
+export const diplomacy = 5;
+export const intrigue = 81;
+export const warfare = 68;
+export const skills = (education + diplomacy + intrigue + warfare) / 4;
+
+{/* Seat of Power stats */}
+export const guards = 34;
+export const majesty = 29;
+export const structure = 20;
+export const supplies = 38;
+export const seatOfPower = (guards + majesty + structure + supplies) / 4;
+
 House Umbar is a Great House of Westmark and act as Wardens of Umberland.
 
-## Resources
-- **Coat of Arms**: TODO.
-- **Seat of Power**: [Shaded Keep](/seats-of-power/shaded-keep)
-- **Regent**: [Regent Umbar](/regents/regent-umbar)
-- **Heir**: TBD
-- **Religion**: TODO
+<RealmOverview
+  power={(spirit + prosperity + might + disposition + skills + seatOfPower) / 6}
+  coatOfArms="A green, coiled serpent baring its fangs on a black field."
+  religions={[
+    { value: "The Sundered God", link: "/setting/religion#the-sundered-god" }
+  ]}
+  heir={{ value: "TBD", link: "/great-houses/house-umbar#heir" }}
+  allies={[
+    { value: "No allies" },
+  ]}
+  enemies={[
+    { value: "House Ethelridge", link: "/great-houses/house-ethelridge" },
+    { value: "House Bluecliff", link: "/minor-houses/house-bluecliff" },
+  ]}
+  />
 
-### Allies
+## Realm | Umberland
+
 TODO
 
-### Enemies
-- [House Ethelridge](/great-houses/house-ethelridge)
+<StatGrid>
+  <StatGroup class="col-span-12" title="Spirit" value={spirit}>
+    <Stat name="Crime" value={crime} inverse={true} />
+    <Stat name="Health" value={health} />
+    <Stat name="Morale" value={morale} />
+    <Stat name="Reverence" value={reverence} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Prosperity" value={prosperity}>
+    <Stat name="Food" value={food} />
+    <Stat name="Resources" value={resources} />
+    <Stat name="Trade" value={trade} />
+    <Stat name="Wealth" value={wealth} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Might" value={might}>
+    <Stat name="Army" value={army} />
+    <Stat name="Navy" value={navy} />
+    <Stat name="Defenses" value={defenses} />
+    <Stat name="Population" value={population} />
+  </StatGroup>
+</StatGrid>
 
-## Members
-TBD
+## Regent | Unnamed
+
+Regent Umbar is the Warden of the Umberland realm. Umbar Nobles are reserved and rumored to be cursed. They are not trusted as most view them as practitioners of Witchcraft.
+
+<StatGrid>
+  <StatGroup class="col-span-12" title="Disposition" value={disposition}>
+    <Stat name="Age" value="??" colorless="true" />
+    <Stat name="Romance" value={romance} />
+    <Stat name="Toughness" value={toughness} />
+    <Stat name="Honor" value={honor} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Skills" value={skills}>
+    <Stat name="Education" value={education} />
+    <Stat name="Diplomacy" value={diplomacy} />
+    <Stat name="Intrigue" value={intrigue} />
+    <Stat name="Warfare" value={warfare} />
+  </StatGroup>
+</StatGrid>
+
+## Seat of Power | Shaded Keep
+
+<StatGroup class="col-span-12" value={seatOfPower}>
+  <Stat name="Guards" value={guards} />
+  <Stat name="Majesty" value={majesty} />
+  <Stat name="Structure" value={structure} />
+  <Stat name="Supplies" value={supplies} />
+</StatGroup>

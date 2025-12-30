@@ -3,17 +3,119 @@ title: House Ashcroft
 description: Details concerning House Ashcroft and its members.
 ---
 
-House Ashcroft is a Great House of Westmark and act as Wardens of Flooded Vale.
+import Stat from "/src/components/stats/Stat.astro";
+import StatGrid from "/src/components/stats/StatGrid.astro";
+import StatGroup from "/src/components/stats/StatGroup.astro";
+import RealmOverview from "/src/components/stats/RealmOverview.astro";
 
-## Resources
-- **Coat of Arms**: TODO.
-- **Seat of Power**: [Paengro](/seats-of-power/paengro)
-- **Regent**: [Regent Ashcroft](/regents/regent-ashcroft)
-- **Heir**: TBD
-- **Religion**: TODO
+{/* Spirit stats */}
+export const crime = 25;
+export const health = 62;
+export const morale = 53;
+export const reverence = 95;
+export const spirit = ((100 - crime) + health + morale + reverence) / 4;
 
-### Allies
-- [House Greyreave](/minor-houses/house-greyreave)
+{/* Prosperity stats */}
+export const food = 44;
+export const resources = 40;
+export const trade = 55;
+export const wealth = 60;
+export const prosperity = (food + resources + trade + wealth) / 4;
 
-### Enemies
-- [House Imperion](/great-houses/house-imperion)
+{/* Might stats */}
+export const army = 25;
+export const navy = 83;
+export const defenses = 28;
+export const population = 49;
+export const might = (army + navy + defenses + population) / 4;
+
+{/* Disposition stats */}
+export const age = 0;
+export const romance = 59;
+export const toughness = 27;
+export const honor = 50;
+export const disposition = (romance + toughness + honor) / 3;
+
+{/* Skills stats */}
+export const education = 60;
+export const diplomacy = 71;
+export const intrigue = 95;
+export const warfare = 22;
+export const skills = (education + diplomacy + intrigue + warfare) / 4;
+
+{/* Seat of Power stats */}
+export const guards = 52;
+export const majesty = 50;
+export const structure = 56;
+export const supplies = 55;
+export const seatOfPower = (guards + majesty + structure + supplies) / 4;
+
+House Ashcroft is a Great House of Westmark and act as Wardens of the Flooded Vale.
+
+<RealmOverview
+  power={(spirit + prosperity + might + disposition + skills + seatOfPower) / 6}
+  coatOfArms="A raised white hand with an eye in the palm on a grey field."
+  religions={[
+    { value: "The Sundered God", link: "/setting/religion#the-sundered-god" }
+  ]}
+  heir={{ value: "TBD", link: "/great-houses/house-ashcroft#heir" }}
+  allies={[
+    { value: "House Greyreave", link: "/minor-houses/house-greyreave" },
+  ]}
+  enemies={[
+    { value: "House Imperion", link: "/great-houses/house-imperion" },
+  ]}
+  />
+
+## Realm | Flooded Vale
+
+TODO
+
+<StatGrid>
+  <StatGroup class="col-span-12" title="Spirit" value={spirit}>
+    <Stat name="Crime" value={crime} inverse={true} />
+    <Stat name="Health" value={health} />
+    <Stat name="Morale" value={morale} />
+    <Stat name="Reverence" value={reverence} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Prosperity" value={prosperity}>
+    <Stat name="Food" value={food} />
+    <Stat name="Resources" value={resources} />
+    <Stat name="Trade" value={trade} />
+    <Stat name="Wealth" value={wealth} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Might" value={might}>
+    <Stat name="Army" value={army} />
+    <Stat name="Navy" value={navy} />
+    <Stat name="Defenses" value={defenses} />
+    <Stat name="Population" value={population} />
+  </StatGroup>
+</StatGrid>
+
+## Regent | Unnamed
+
+Regent Ashcroft is the Warden of the Flooded Vale realm.
+
+<StatGrid>
+  <StatGroup class="col-span-12" title="Disposition" value={disposition}>
+    <Stat name="Age" value="??" colorless="true" />
+    <Stat name="Romance" value={romance} />
+    <Stat name="Toughness" value={toughness} />
+    <Stat name="Honor" value={honor} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Skills" value={skills}>
+    <Stat name="Education" value={education} />
+    <Stat name="Diplomacy" value={diplomacy} />
+    <Stat name="Intrigue" value={intrigue} />
+    <Stat name="Warfare" value={warfare} />
+  </StatGroup>
+</StatGrid>
+
+## Seat of Power | Paengro Castle
+
+<StatGroup class="col-span-12" value={seatOfPower}>
+  <Stat name="Guards" value={guards} />
+  <Stat name="Majesty" value={majesty} />
+  <Stat name="Structure" value={structure} />
+  <Stat name="Supplies" value={supplies} />
+</StatGroup>

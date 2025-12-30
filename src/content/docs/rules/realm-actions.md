@@ -35,13 +35,13 @@ Attempt to woo an NPC or PC. This is a Romance check for the regent. A wooed NPC
 
 A wooed PC does not need to take any action, but this should impact their motivations and roleplay.
 
-> _Consent is important for anything romantic or sexual. Do not write anything in a letter or perform any action that would make someone in real life uncomfortable without first explicitly getting their approval. If either party is uncomfortable with something that occurs please speak to the GM._
+> _Consent is important for anything romantic or sexual. Do not write anything in a letter or perform any action that would make someone in real life uncomfortable without first explicitly getting their approval. The GM will always read a letter first and if the content is too strong then they may ask you to rewrite it. If either party is uncomfortable with something that occurs please speak to the GM._
 
 You may choose to woo someone who is not of a great or minor house, in which case a success automatically results in a marriage.
 
 ## Conceive a Child (1)
 
-Make a health check. On a failure, there was a miscarriage. Otherwise, in nine turns, you or your partner will conceive a child. There is a 1% chance of death when this occurs.
+Make a health check. On a failure, there was a miscarriage. Otherwise, in nine turns, you or your partner will conceive a child. There is a chance of death for the child or partner when this occurs.
 
 ## Construction (variable)
 
@@ -57,11 +57,11 @@ Engage in diplomacy and trade with existing trade routes. This usually requires 
 
 ## Intrigue (1)
 
-This is a special action you can take to obscure any other action. This increases the cost of the real action by +1.
+This is a special action you can take to obscure any other action. You spend realm tokens for both the intrigue action and the obscured action. ex: You
 
 When the realm update is posted it will appear as if you did not perform an action or it will appear like you made another action of your choice (like a decree or construction project). You do not gain the benefits of the "fake" action.
 
-## Assassination (3)
+## Assassination (5)
 
 Plan an assassination. Based on the plan, the GM will assign the chance of success. If you do not perform an intrigue action to obscure this action, everyone will know you were the one who performed the assassination.
 
@@ -69,7 +69,9 @@ If you do perform an intrigue action to obscure the assassination, then the GM w
 
 ## Spy (1)
 
-Choose a regent or steward and make an intrigue check. On a success, you may intercept and read any letters from them at the end of the turn. If you wish, you may destroy them or pass them along.
+This action is always concealed. You do not need to perform the intrigue realm action to obscure it.
+
+Choose a regent or vassal and make an intrigue check. On a success, you may intercept and read any letters from them at the end of the turn. If you wish, you may destroy them or pass them along.
 
 If you destroy any letters, they will eventually hear (1-3 turns) that word did not reach their intended recipient.
 
@@ -79,20 +81,24 @@ Choose a realm you would like to influence. This could mean decreasing Reverence
 
 ## Muster Troops (1)
 
-Muster troops for war. This action must be taken before the battle, pillage, or siege action can be performed. Mustering troops will decrease morale, resources, and wealth.
+Muster troops for war. This action must be taken before the battle, pillage, or siege action can be performed. Mustering troops will decrease morale, food, resources, trade, and wealth.
+
+## Disband Troops (1)
+
+Disband troops and send them home. This action can only be taken after mustering troops. Disbanding troops will increase morale, food, resources, trade, and wealth.
 
 ## Battle (1)
 
-You must perform the muster troops action before this can be performed. Engage another army, navy, or foe in warfare. Both sides must provide the GM with their battle strategy and then the GM will make whatever realm checks or regent checks they think necessary to perform the battle and determine the outcome.
+You must have mustered troops to take this action. Engage another army, navy, or foe in warfare. Both sides must provide the GM with their battle strategy and then the GM will make whatever realm checks or regent checks they think necessary to perform the battle and determine the outcome.
 
 Only the side that initiates the battle must spend an action token on it.
 
 ## Pillage (1)
 
-You must perform the muster troops action before this can be performed. Engage civilians with your army or navy. This is devastating for the realm you attack, but will impact your honor and possibly the morale of your allies.
+You must have mustered troops to take this action. Engage civilians with your army or navy. This is devastating for the realm you attack, but will impact your honor and possibly the morale of your allies.
 
-## Siege (1)
+## Siege (2)
 
-You must perform the muster troops action before this can be performed. Engage a fortress or castle in a siege. This may transition into a battle if either side wishes to, otherwise the action has no immediate outcome. The realm that is sieged quickly loses food, health, morale, and population until the siege ends.
+You must have mustered troops to take this action. Engage a fortress or castle in a siege. This may transition into a battle if either side wishes to, otherwise the action has no immediate outcome. The realm that is sieged quickly loses food, health, morale, and population until the siege ends.
 
 The siege ends when the besieged surrender or the regent leading the siege does not spend their action on the siege.

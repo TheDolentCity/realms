@@ -13,7 +13,7 @@ export default defineConfig({
   }),
   integrations: [
     starlight({
-      title: "Realms",
+      title: "Realms of Westmark",
       components: {
         Sidebar: "./src/components/overrides/SidebarOverride.astro",
       },

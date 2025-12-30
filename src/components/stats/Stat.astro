@@ -26,7 +26,11 @@ const backgroundCss = new CssBuilder()
   )
   .addClass(
     "border-green-500 text-green-900 from-green-400 via-green-300 to-green-200/75 dark:text-green-100 dark:from-green-700 dark:via-green-800 dark:to-green-950/75 from-0% via-40% to-80%",
-    v < 80 && v >= 40 && !colorless
+    v < 80 && v >= 50 && !colorless
+  )
+  .addClass(
+    "border-zinc-500 text-zinc-900 from-zinc-400 via-zinc-300 to-zinc-200/10 dark:text-zinc-100 dark:from-zinc-700 dark:via-zinc-800 dark:to-zinc-950/10 from-0% via-40% to-80%",
+    v < 50 && v >= 40 && !colorless
   )
   .addClass(
     "border-amber-500 text-amber-900 from-amber-400 via-amber-300 to-amber-200/75 dark:text-amber-100 dark:from-amber-700 dark:via-amber-800 dark:to-amber-950/75 from-0% via-20% to-40%",

@@ -3,20 +3,120 @@ title: House Moxton
 description: Details concerning House Moxton and its members.
 ---
 
-House Moxton is a Great House of Westmark and act as Wardens of Greyspire.
+import Stat from "/src/components/stats/Stat.astro";
+import StatGrid from "/src/components/stats/StatGrid.astro";
+import StatGroup from "/src/components/stats/StatGroup.astro";
+import RealmOverview from "/src/components/stats/RealmOverview.astro";
 
-## Resources
-- **Coat of Arms**: TODO.
-- **Seat of Power**: [The Crag](/seats-of-power/the-crag)
-- **Regent**: [Regent Moxton](/regents/regent-moxton)
-- **Heir**: TBD
-- **Religion**: TODO
+{/* Spirit stats */}
+export const crime = 24;
+export const health = 43;
+export const morale = 50;
+export const reverence = 10;
+export const spirit = ((100 - crime) + health + morale + reverence) / 4;
 
-### Allies
+{/* Prosperity stats */}
+export const food = 21;
+export const resources = 51;
+export const trade = 92;
+export const wealth = 60;
+export const prosperity = (food + resources + trade + wealth) / 4;
+
+{/* Might stats */}
+export const army = 70;
+export const navy = 2;
+export const defenses = 97;
+export const population = 13;
+export const might = (army + navy + defenses + population) / 4;
+
+{/* Disposition stats */}
+export const age = 0;
+export const romance = 50;
+export const toughness = 95;
+export const honor = 66;
+export const disposition = (romance + toughness + honor) / 3;
+
+{/* Skills stats */}
+export const education = 29;
+export const diplomacy = 28;
+export const intrigue = 30;
+export const warfare = 70;
+export const skills = (education + diplomacy + intrigue + warfare) / 4;
+
+{/* Seat of Power stats */}
+export const guards = 99;
+export const majesty = 70;
+export const structure = 99;
+export const supplies = 39;
+export const seatOfPower = (guards + majesty + structure + supplies) / 4;
+
+House Moxton is a Great House of Westmark and act as Wardens of Greyspire. These central mountains are covered in snow and provide strong fortification. The land and people are both distant and independent. House Moxton's seat of power, the Crag, was carved directly into the mountain itself and is nearly impregnable. 
+
+<RealmOverview
+  power={(spirit + prosperity + might + disposition + skills + seatOfPower) / 6}
+  coatOfArms="A white bear with a scar over one eye on a black field."
+  religions={[
+    { value: "The Sundered God", link: "/setting/religion#the-sundered-god" }
+  ]}
+  heir={{ value: "TBD", link: "/great-houses/house-moxton#heir" }}
+  allies={[
+    { value: "House Bluecliff", link: "/minor-houses/house-bluecliff" },
+    { value: "House Morn", link: "/minor-houses/house-morn" },
+  ]}
+  enemies={[
+    { value: "House Umbar", link: "/great-houses/house-umbar" },
+  ]}
+  />
+
+## Realm | Greyspire
+
 TODO
 
-### Enemies
-None
+<StatGrid>
+  <StatGroup class="col-span-12" title="Spirit" value={spirit}>
+    <Stat name="Crime" value={crime} inverse={true} />
+    <Stat name="Health" value={health} />
+    <Stat name="Morale" value={morale} />
+    <Stat name="Reverence" value={reverence} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Prosperity" value={prosperity}>
+    <Stat name="Food" value={food} />
+    <Stat name="Resources" value={resources} />
+    <Stat name="Trade" value={trade} />
+    <Stat name="Wealth" value={wealth} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Might" value={might}>
+    <Stat name="Army" value={army} />
+    <Stat name="Navy" value={navy} />
+    <Stat name="Defenses" value={defenses} />
+    <Stat name="Population" value={population} />
+  </StatGroup>
+</StatGrid>
 
-## Members
-TBD
+## Regent | Unnamed
+
+Regent Moxton is the Warden of the Greyspire realm. House Moxton is generally regarded as isolationist, proud, and temperamental. They are naturally sturdy and do not balk at the thought of war. To each Moxton Regent, they are the King of the Crag.
+
+<StatGrid>
+  <StatGroup class="col-span-12" title="Disposition" value={disposition}>
+    <Stat name="Age" value="??" colorless="true" />
+    <Stat name="Romance" value={romance} />
+    <Stat name="Toughness" value={toughness} />
+    <Stat name="Honor" value={honor} />
+  </StatGroup>
+  <StatGroup class="col-span-12" title="Skills" value={skills}>
+    <Stat name="Education" value={education} />
+    <Stat name="Diplomacy" value={diplomacy} />
+    <Stat name="Intrigue" value={intrigue} />
+    <Stat name="Warfare" value={warfare} />
+  </StatGroup>
+</StatGrid>
+
+## Seat of Power | The Crag
+
+<StatGroup class="col-span-12" value={seatOfPower}>
+  <Stat name="Guards" value={guards} />
+  <Stat name="Majesty" value={majesty} />
+  <Stat name="Structure" value={structure} />
+  <Stat name="Supplies" value={supplies} />
+</StatGroup>
