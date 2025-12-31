@@ -42,9 +42,14 @@ export default defineConfig({
         },
         {
           label: "Rules",
-          autogenerate: {
-            directory: "rules",
-          },
+          collapsed: true,
+          items: [
+            { label: "Overview", link: "/rules/overview" },
+            { label: "Realm Actions", link: "/rules/realm-actions" },
+            { label: "Realm Checks", link: "/rules/realm-checks" },
+            { label: "Regent Checks", link: "/rules/regent-checks" },
+            { label: "Writing Letters", link: "/rules/writing-letters" },
+          ],
         },
         {
           label: "Setting",
@@ -68,10 +73,10 @@ export default defineConfig({
           },
         },
         {
-          label: "Minor Houses",
+          label: "Vassal Houses",
           collapsed: true,
           autogenerate: {
-            directory: "minor-houses",
+            directory: "vassal-houses",
           },
         },
       ],
