@@ -23,10 +23,12 @@ TODO
 
 ## The Sundered God
 
-Followers believe in a monolithic and singular God who created all life and the world. They cut from their own flesh to make the land and from their blood they made the sea. When their work was done, they broke open their head and spilled forth all of the plants and animals they could think of.
+Followers believe in a monolithic and singular God who created all life and the world. This God cut from their own flesh to make the land and from their blood they made the sea. When their work was done, they broke open their head and spilled forth all of the plants and animals they had dreamed of.
 
 Worshippers of the Sundered God follow the teachings of the Two-Fold Path, an ancient text that provides advice on morality, cleanliness, and law. Only literate and trained clerics may speak as to the true Two-Fold Path and often gather in temples constructed for this purpose and other rituals.
 
-The Two-Fold Path emphasizes that one's actions lead toward a White or a Red path. One "walks the white" through acts of charity, modesty, servitude, and holiness. One "crawls the red" via acts of cruelty, promiscuity, violence, and treachery. Repeat or obscene offenders may be forced to wear red robes by armed clerics.
+The Two-Fold Path emphasizes that one's actions lead toward a White or a Red path. One "walks the white" through acts of charity, modesty, servitude, and holiness. One "crawls the red" via acts of cruelty, promiscuity, violence, and treachery. Repeat or obscene offenders may be forced to wear red robes by mace-wielding clerics.
 
-Some clerics dawn red robes and crawl wherever they go. It is believed this voluntary practice helps draw out the "red" from the local people and draw it into the cleric. In the old days, they were ritualistically killed afterwards to send the "red" to the Afterpath.
+Some clerics dawn red robes and crawl wherever they go. It is believed this voluntary practice helps draw out the "Red" from the local people and into the cleric. In the old days, they were ritualistically killed afterwards to send the Red to the Underearth.
+
+Followers believe that when those who walk the White die, they enter the Underearth and achieve peace as they return to the Sundered God. Those who crawl the Red are taken into the sky when they die and burned as kindling for the stars.
