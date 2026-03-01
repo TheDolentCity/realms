@@ -2,6 +2,7 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import vercelAdapter from "@astrojs/vercel";
 import tailwindcss from "@tailwindcss/vite";
+import starlightThemeRapide from "starlight-theme-rapide";
 
 export default defineConfig({
   output: "static",
@@ -14,11 +15,14 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Realms of Westmark",
-      components: {
-        Sidebar: "./src/components/overrides/SidebarOverride.astro",
-      },
+      plugins: [starlightThemeRapide()],
+      // components: {
+      //   Sidebar: "./src/components/overrides/SidebarOverride.astro",
+      // },
       customCss: [
         "./src/styles/global.css",
+        "@fontsource-variable/eb-garamond/index.css",
+        "@fontsource-variable/crimson-pro/index.css",
         "@fontsource/im-fell-dw-pica/400.css",
         "@fontsource/averia-serif-libre/400.css",
       ],
@@ -61,16 +65,19 @@ export default defineConfig({
         {
           label: "Realms",
           collapsed: true,
-          items: [
-            {
-              label: "Fairfield",
-              autogenerate: { directory: "/realms/fairfield" },
-            },
-            {
-              label: "The Flooded Vale",
-              autogenerate: { directory: "/realms/the-flooded-vale" },
-            },
-          ],
+          autogenerate: {
+            directory: "realms",
+          },
+          // items: [
+          //   {
+          //     label: "Fairfield",
+          //     autogenerate: { directory: "/realms/fairfield" },
+          //   },
+          //   {
+          //     label: "The Flooded Vale",
+          //     autogenerate: { directory: "/realms/the-flooded-vale" },
+          //   },
+          // ],
         },
         {
           label: "Great Houses",

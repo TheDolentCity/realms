@@ -5,6 +5,7 @@ import {
   Crown,
   ShieldHalf,
   Sparkle,
+  ChessRook,
 } from "@lucide/astro";
 import Stat from "./Stat.astro";
 
@@ -15,6 +16,7 @@ interface Hyperlink {
 
 interface Props {
   power: number;
+  wardens: Hyperlink;
   coatOfArms: string;
   religions: Hyperlink[];
   heir: Hyperlink;
@@ -22,7 +24,7 @@ interface Props {
   enemies: Hyperlink[];
 }
 
-const { power, coatOfArms, religions, heir, allies, enemies } = Astro.props;
+const { power, wardens, coatOfArms, religions, heir, allies, enemies } = Astro.props;
 
 const value = Math.round(power);
 ---
@@ -30,9 +32,17 @@ const value = Math.round(power);
 <div
   class="not-content flex gap-6 p-4 border rounded-xl items-start border-(--sl-color-hairline) bg-(--sl-color-bg-sidebar)/50"
 >
-  <Stat name="Power" value={value} />
+  <!-- <Stat name="Power" value={value} /> -->
   <table>
     <tbody>
+      <tr>
+        <td class="flex gap-1.5 pr-4 items-center font-semibold text-(--sl-color-white) text-nowrap">
+          <ChessRook size={20} class="text-accent-400" /> Wardens
+        </td>
+        <td>
+          <a href={wardens.link}>{wardens.value}</a>
+        </td>
+      </tr>
       <tr>
         <td class="flex gap-1.5 pr-4 items-center font-semibold text-(--sl-color-white) text-nowrap">
           <ShieldHalf size={20} class="text-accent-400" /> Coat of Arms
@@ -50,7 +60,7 @@ const value = Math.round(power);
           )}
         </td>
       </tr>
-      <tr>
+      <!-- <tr>
         <td class="flex gap-1.5 pr-4 items-center font-semibold text-(--sl-color-white) text-nowrap">
           <Crown size={20} class="text-accent-400" /> Heir
         </td>
@@ -79,7 +89,7 @@ const value = Math.round(power);
             <span class="font-semibold">{i + 1 < enemies.length ? "| " : ""}</span>
           )}
         </td>
-      </tr>
+      </tr> -->
     </tbody>
   </table>
 </div>

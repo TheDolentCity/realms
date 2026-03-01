@@ -1,0 +1,47 @@
+---
+title: Frostwatch
+description: Details concerning the Westmark realm of Frostwatch.
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components';
+import Stat from "/src/components/stats/Stat.astro";
+import StatGrid from "/src/components/stats/StatGrid.astro";
+import StatGroup from "/src/components/stats/StatGroup.astro";
+import RealmOverview from "/src/components/stats/RealmOverview.astro";
+
+<RealmOverview
+  wardens={{value: "House Ironwood", link: "/great-houses/house-ironwood"}}
+  coatOfArms="An ironwood tree and a harpoon head on a white field."
+  religions={[
+    { value: "The Great Beasts", link: "/setting/religion#the-great-beasts" }
+  ]}
+  />
+
+## Spirit
+
+A realm's spirit represents its culture, image, and people.
+
+- <Badge text="A cold, northern land" variant="note" />
+- <Badge text="The people here are considered 'proud' by outsiders" variant="note" />
+- <Badge text="Common folk are obsessed with omens" variant="note" />
+- <Badge text="Brigands often attack on the road to obtain food" variant="danger" />
+
+## Prosperity
+
+A realm's prosperity represents its resources, trade, and wealth.
+
+- <Badge text="The realm is covered in dense forests" variant="success" />
+- <Badge text="The realm contains vast limestone quarries" variant="success" />
+- <Badge text="All whale oil in the realm comes from this realm's fishermen" variant="success" />
+- <Badge text="Harsh conditions make it difficult to grow food" variant="danger" />
+
+## Might
+
+A realm's might represents its army, navy, and physical defenses.
+
+- <Badge text="People who live here are used to extreme hardship" variant="success" />
+
+## Seat of Power | Remheim
+
+- <Badge text="A massive castle, second only to Dawnstone" variant="success" />
+- <Badge text="Its mighty walls were never breached during the Eastmark Invasion" variant="success" />
