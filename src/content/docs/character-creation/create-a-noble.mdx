@@ -1,0 +1,54 @@
+---
+title: Create a Noble
+description: Rules for creating a noble.
+---
+
+import { Steps } from '@astrojs/starlight/components';
+import Caption from "/src/components/captions/Caption.astro";
+
+<Steps>
+<ol>
+  <li>
+    <h3>Determine Sex</h3>
+    <p>Sex does not impact stats. This is a medieval-inspired world, but it is not accurate to history. Bigotry on the basis of gender or sexuality is not accepted.</p>
+  </li>
+  <li>
+    <h3><a href="#age">Determine their age</a></h3>
+    <p>Age determines their physical disposition, skills, and experiences. Roll for six age brackets: child, youth, young adult, mature adult, old, or elder.</p>
+  </li>
+  <li>
+    <h3><a href="/rules/captions#regent-and-vassal-captions">Determine captions</a></h3>
+    <p>Nobles have disposition, skill, or experience captions. Roll on each table a number of times based on the noble's age. Also go to the page of their house and record its relevant caption as their own.</p>
+  </li>
+  <li>
+    <h3><a href="#relationships">Determine relationships</a></h3>
+    <p>Nobles have both a familial and emotional relationships with the leaders of their family.</p>
+  </li>
+</ol>
+</Steps>
+
+## Age
+
+Roll 1d6. This determines the noble's disposition, skills, and experience captions.
+
+| 1d6 | Age                  | Captions                                              |
+| --- | -------------------- | ----------------------------------------------------- |
+| 1   | Child (8-12)         | None                                                  |
+| 2   | Youth (14-20)        | 1 disposition caption                                 |
+| 3   | Young Adult (22-28)  | 1 skill caption                                       |
+| 4   | Mature Adult (30-46) | 2 skill captions                                      |
+| 5   | Old (62-70)          | 1 experience caption                                  |
+| 6   | Elder (86-99)        | 1 experience caption + 1 penalty disposition captions |
+
+## Relationships
+
+Roll 2d6. One for kinship, and one for the bond that they have with the leader of their house.
+
+| 1d6 | Kinship           | Bond                           |
+| --- | ----------------- | ------------------------------ |
+| 1   | Aunt or Uncle     | They would die for you         |
+| 2   | Sister or Brother | They will do whatever you ask  |
+| 3   | Daughter or Son   | They want to protect you       |
+| 4   | Niece or Nephew   | They look up to you            |
+| 5   | Distant Cousin    | They envy you or your position |
+| 6   | Fictive kinship   | They seek revenge against you  |

@@ -33,3 +33,4 @@ One realm event is rolled for each realm at the end of each turn. These events c
 - 24: Bounty
 - 25: Supernatural Event
 - 26-100: Nothing of Note
+

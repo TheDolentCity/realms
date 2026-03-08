@@ -3,7 +3,7 @@ title: Create a Regent
 description: Rules for creating a regent.
 ---
 
-import { Badge, Steps } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
 import Caption from "/src/components/captions/Caption.astro";
 
 There are nine realms of Westmark and each one needs a regent created for it. Each player must create a regent _and_ their heirs and relatives. This is a fairly straightforward process, but will take some time.
@@ -11,7 +11,6 @@ There are nine realms of Westmark and each one needs a regent created for it. Ea
 If there are more than nine interested players, then some players may instead need to create vassals for a realm of Westmark. Vassals don't have as much power or resources and are beholden to their regents, but their actions are always hidden from the game update page.
 
 # Create a Regent
-There are N steps to character creation.
 
 <Steps>
 <ol>
@@ -24,8 +23,20 @@ There are N steps to character creation.
     <p>Age determines your physical disposition, skills, experiences, and how many heirs that you begin with. Choose one of five age brackets: child, young, adult, old, or elder.</p>
   </li>
   <li>
-    <h3><a href="/character-creation/captions#regent-and-vassal-captions">Determine captions</a></h3>
-    <p>Regents have disposition, skill, and experience captions. Roll on each table a number of times based on your starting age.</p>
+    <h3><a href="/rules/captions#regent-and-vassal-captions">Determine captions</a></h3>
+    <p>Regents have disposition, skill, and experience captions. Roll on each table a number of times based on your starting age. Also go to the page of your great house and record its relevant caption as your own.</p>
+  </li>
+  <li>
+    <h3><a href="#personal-objectives">Determine personal objectives</a></h3>
+    <p>Regents have personal objectives. Choose two or roll twice randomly on the table.</p>
+  </li>
+  <li>
+    <h3><a href="#family">Create family members</a></h3>
+    <p>Roll to determine the size of your family and then follow the rules on the [create a noble](/character-creation/create-a-noble) page.</p>
+  </li>
+  <li>
+    <h3><a href="#appearance">Determine your appearance</a></h3>
+    <p>Choose your appearance from each category, or roll for each column on the table.</p>
   </li>
 </ol>
 </Steps>
@@ -122,3 +133,34 @@ Choose this option if you want a regent with a grand history who is not long for
 - You begin with <Caption text="1" variant="success" /> **legendary** experience caption. You are famous throughout all of the Realms for this experience. Its written in history and sung of in songs across Westmark.
 - You begin with the <Caption text="weak and feeble" variant="danger" /> penalty caption.
 - You begin with the <Caption text="will not see another Winter" variant="danger" /> penalty caption.
+
+## Personal Objectives
+Choose two or roll 2d12 to determine your personal objectives randomly.
+
+1. <Caption text="Be crowned King of Westmark" />
+1. <Caption text="Become a paragon of Chivalry" />
+1. <Caption text="Become a warrior of renown and glory" />
+1. <Caption text="Better the world for the common folk" />
+1. <Caption text="Destroy the Monarchy" />
+1. <Caption text="Dissolve the Westmark Covenant" />
+1. <Caption text="Enshrine your faith as the one, true Westmark theology" />
+1. <Caption text="Establish your house as the strongest in Westmark" />
+1. <Caption text="Gain wealth and riches beyond number" />
+1. <Caption text="Make your lands peaceful and plentiful" />
+1. <Caption text="Orchestrate the death of your rivals" />
+1. <Caption text="Rise to the highest honor" />
+
+## Create family members
+You have 1d6 family members. Navigate to the [create a noble](/character-creation/create-a-noble) page to determine their description, relationship to you, and captions. If you are married, the first noble you create must be your partner.
+
+## Appearance
+Roll 1d6 for each column.
+
+| d6  | Build         | Clothing   | Mannerism           | Personality |
+| --- | ------------- | ---------- | ------------------- | ----------- |
+| 1   | Broad-Chested | Ceremonial | Deep, booming voice | Hot-headed  |
+| 2   | Delicate      | Elegant    | Formal speech       | Mirthful    |
+| 3   | Gaunt         | Exotic     | Laughs often        | Righteous   |
+| 4   | Grizzled      | Frayed     | Casual affect       | Sarcastic   |
+| 5   | Towering      | Plain      | Paces anxiously     | Serene      |
+| 6   | Weathered     | Practical  | Taps loudly         | Stoic       |
