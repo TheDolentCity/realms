@@ -35,6 +35,9 @@ importers:
       '@fontsource/im-fell-english-sc':
         specifier: ^5.0.8
         version: 5.2.6
+      '@fontsource/monaspace-xenon':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@lucide/astro':
         specifier: ^0.562.0
         version: 0.562.0(astro@5.16.6(@types/node@25.0.3)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.54.0)(typescript@5.9.3)(yaml@2.8.2))
@@ -357,6 +360,9 @@ packages:
 
   '@fontsource/im-fell-english-sc@5.2.6':
     resolution: {integrity: sha512-+uVXYFiAURkyvKKbkN/DyOs2PNIVt+/pIyax8FpVppxgpU676gRFp7eAUxdKBTPCT0zhM8UFaZ+IhCza0Vpl7w==}
+
+  '@fontsource/monaspace-xenon@5.2.5':
+    resolution: {integrity: sha512-k10RCF5nek9ee/rKSALaeYgOcJjjvzxxGkIlPwkSAoasjrsEeVKOSJ6ii1dMXOZwL9ZtW3p56Dxhgaw0Gtwvaw==}
 
   '@img/colour@1.0.0':
     resolution: {integrity: sha512-A5P/LfWGFSl6nsckYtjw9da+19jB8hkJ6ACTGcDfEJ0aE+l2n2El7dsVM7UVHZQ9s2lmYMWlrS21YLy2IR1LUw==}
@@ -3206,6 +3212,8 @@ snapshots:
   '@fontsource/im-fell-dw-pica@5.2.6': {}
 
   '@fontsource/im-fell-english-sc@5.2.6': {}
+
+  '@fontsource/monaspace-xenon@5.2.5': {}
 
   '@img/colour@1.0.0':
     optional: true

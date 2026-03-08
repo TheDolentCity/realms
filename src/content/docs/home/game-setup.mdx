@@ -3,138 +3,22 @@ title: Game Setup
 description: Rules for setting up the game.
 ---
 
-import { Badge, Steps } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
 
-There are nine realms of Westmark and each one needs a regent created for it. Each player must create a regent _and_ their heirs and relatives. This is a fairly straightforward process, but will take some time.
-
-If there are more than nine interested players, then some players may instead need to create vassals for a realm of Westmark. Vassals don't have as much power or resources and are beholden to their regents, but their actions are always hidden from the game update page.
-
-# Create a Regent
-There are N steps to character creation.
+# Game Setup
+There are N steps to setting up the game.
 
 <Steps>
 <ol>
   <li>
-    <h3>Determine your Sex and Orientation</h3>
-    <p>Neither aspect impacts your stats. This is a medieval-inspired world, but it is not accurate to history. Bigotry on the basis of gender or sexuality is not accepted. Queer royal couples are accepted, still with the expectation that they [obtain heirs](/setting/heirs#obtaining-heirs).</p>
+    <h3>HEADER</h3>
+    <p>BODY</p>
   </li>
   <li>
-    <h3><a href="#age">Determine your age</a></h3>
-    <p>Age determines your physical disposition, skills, experiences, and how many heirs that you begin with. Choose one of five age brackets: child, young, adult, old, or elder.</p>
-  </li>
-  <li>
-    <h3><a href="#disposition">Determine disposition captions</a></h3>
-    <p>These captions describe your regent's body, mind, and virtues. These captions are broad, but not as potent as skills and experiences.</p>
-  </li>
-  <li>
-    <h3><a href="#skill">Determine skill captions</a></h3>
-    <p>These captions describe your regent's training and natural aptitudes. Skills are superior to a regent's base disposition, but not as valuable as experiences.</p>
-  </li>
-  <li>
-    <h3><a href="#experience">Determine experience captions</a></h3>
-    <p>These captions describe your regent's most notable experiences. Experiences are the strongest captions.</p>
+    <h3>HEADER</h3>
+    <p>BODY</p>
   </li>
 </ol>
 </Steps>
 
-## Age
-
-Choose an age bracket: [child](#child), [young](#young), [adult](#adult), [old](#old), or [elder](#elder). This determines the amount of disposition, skills, and experience captions you begin with. It also determines your heirs.
-
-### Child
-Choose this option if you want a weaker regent, but a stronger realm.
-
-- You are <Badge text="8 + 1d4" variant="note" /> years old.
-- You begin with <Badge text="1" variant="success" /> disposition captions.
-- You begin with <Badge text="1" variant="success" /> skill captions.
-- You begin with <Badge text="0" variant="success" /> experience captions.
-- You begin with <Badge text="0" variant="success" /> heirs.
-- You begin with the <Badge text="unmarried and unpromised" variant="note" /> caption.
-- You begin with the <Badge text="a weak, growing child" variant="danger" /> penalty caption.
-- Choose any <Badge text="3" variant="success" /> bonus realm captions.
-
-### Young
-Choose this option if you want a regent that grows far stronger once they prove themselves.
-
-- You are <Badge text="14 + 1d6" variant="note" /> years old.
-- You begin with <Badge text="2" variant="success" /> disposition captions.
-- You begin with <Badge text="2" variant="success" /> skill captions.
-- You begin with <Badge text="0" variant="success" /> experience captions.
-- You begin with <Badge text="0" variant="success" /> heirs.
-- Roll a d100 for your marriage status:
-  - `90-99` begin with the <Badge text="married to stranger" variant="note" /> caption.
-  - `80-89` begin with the <Badge text="promised to beloved" variant="note" /> caption.
-  - `50-79` begin with the <Badge text="promised to stranger" variant="note" /> caption.
-  - `00-49` begin with the <Badge text="unmarried and unpromised" variant="note" /> caption.
-- You begin with the <Badge text="an unproven leader" variant="danger" /> penalty caption. If you lose this caption, you immediately gain <Badge text="1" variant="success" /> disposition, skill, and experience caption of your choice.
-
-### Adult
-Choose this option if you want a regent with strong skills and experience, albeit with a slightly weaker realm.
-
-- You are <Badge text="28 + 1d8" variant="note" /> years old.
-- You begin with <Badge text="2" variant="success" /> disposition captions.
-- You begin with <Badge text="2" variant="success" /> skill captions.
-- You begin with <Badge text="2" variant="success" /> experience captions.
-- Roll a d100 for your heir status:
-  - `95-99` begin with <Badge text="6" variant="note" /> heirs.
-  - `90-94` begin with <Badge text="5" variant="note" /> heirs.
-  - `80-89` begin with <Badge text="4" variant="note" /> heirs.
-  - `70-79` begin with <Badge text="3" variant="note" /> heirs.
-  - `60-69` begin with <Badge text="2" variant="note" /> heirs.
-  - `10-59` begin with <Badge text="1" variant="note" /> heirs.
-  - `00-09` begin with <Badge text="0" variant="note" /> heirs.
-- Roll a d100 for your marriage status:
-  - `90-99` begin with the <Badge text="married for love" variant="note" /> caption.
-  - `50-89` begin with the <Badge text="married for power" variant="note" /> caption.
-  - `10-49` begin with the <Badge text="married for alliance" variant="note" /> caption.
-  - `00-09` begin with the <Badge text="unwed since partner's death" variant="note" /> caption.
-- You begin with <Badge text="1" variant="danger" /> penalty realm captions.
-
-### Old
-Choose this option if you want a regent with strong experience, albeit with a weaker body.
-
-- You are <Badge text="62 + 1d10" variant="note" /> years old.
-- You begin with <Badge text="1" variant="success" /> disposition captions.
-- You begin with <Badge text="1" variant="success" /> skill captions.
-- You begin with <Badge text="3" variant="success" /> experience captions.
-- Roll a d100 for your heir status:
-  - `90-99` begin with <Badge text="4" variant="note" /> heirs.
-  - `60-89` begin with <Badge text="3" variant="note" /> heirs.
-  - `20-59` begin with <Badge text="2" variant="note" /> heirs.
-  - `00-19` begin with <Badge text="1" variant="note" /> heirs.
-- Roll a d100 for your marriage status:
-  - `90-99` begin with the <Badge text="married for love" variant="note" /> caption.
-  - `60-89` begin with the <Badge text="married for power" variant="note" /> caption.
-  - `30-59` begin with the <Badge text="married for alliance" variant="note" /> caption.
-  - `00-29` begin with the <Badge text="unwed since partner's death" variant="note" /> caption.
-- You begin with <Badge text="1" variant="danger" /> penalty disposition captions.
-
-### Elder
-Choose this option if you want a regent with a grand history who is not long for this world.
-
-- You are <Badge text="86 + 1d12" variant="note" /> years old.
-- You begin with <Badge text="0" variant="success" /> disposition captions.
-- You begin with <Badge text="1" variant="success" /> skill captions.
-- You begin with <Badge text="4" variant="success" /> experience captions.
-- Roll a d100 for your heir status:
-  - `70-99` begin with <Badge text="2" variant="note" /> heirs.
-  - `30-69` begin with <Badge text="1" variant="note" /> heirs.
-  - `00-29` begin with <Badge text="0" variant="note" /> heirs.
-- Roll a d100 for your marriage status:
-  - `90-99` begin with the <Badge text="married for love" variant="note" /> caption.
-  - `70-89` begin with the <Badge text="married for power" variant="note" /> caption.
-  - `50-69` begin with the <Badge text="married for alliance" variant="note" /> caption.
-  - `00-49` begin with the <Badge text="unwed since partner's death" variant="note" /> caption.
-- You begin with <Badge text="1" variant="success" /> **legendary** experience caption. You are famous throughout all of the Realms for this experience. Its written in history and sung of in songs across Westmark.
-- You begin with the <Badge text="weak and feeble" variant="danger" /> penalty caption.
-- You begin with the <Badge text="will not see another Winter" variant="danger" /> penalty caption.
-
 ## Captions
-
-### Disposition
-
-### Skill
-
-### Experience
-
-### Realm

@@ -19,6 +19,7 @@
     "@fontsource/averia-serif-libre": "^5.0.18",
     "@fontsource/im-fell-dw-pica": "^5.2.6",
     "@fontsource/im-fell-english-sc": "^5.0.8",
+    "@fontsource/monaspace-xenon": "^5.2.5",
     "@lucide/astro": "^0.562.0",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.6",

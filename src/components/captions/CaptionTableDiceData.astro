@@ -1,0 +1,9 @@
+---
+import { CssBuilder } from "../../utilities/css-builder";
+
+const css = new CssBuilder().addClass("w-6 pl-4 pr-2 py-2").build();
+---
+
+<td class={css}>
+  <slot />
+</td>

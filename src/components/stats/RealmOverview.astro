@@ -35,9 +35,14 @@ const value = Math.round(power);
   <!-- <Stat name="Power" value={value} /> -->
   <table>
     <tbody>
+      <!-- <tr>
+        <td class="flex gap-1.5 pr-4 items-center font-semibold text-(--sl-color-white) text-nowrap">
+          <span class="ml-1 text-xl text-(--sl-color-accent)">{power}</span> Power
+        </td>
+      </tr> -->
       <tr>
         <td class="flex gap-1.5 pr-4 items-center font-semibold text-(--sl-color-white) text-nowrap">
-          <ChessRook size={20} class="text-accent-400" /> Wardens
+          <ChessRook size={20} class="text-(--sl-color-accent)" /> Wardens
         </td>
         <td>
           <a href={wardens.link}>{wardens.value}</a>
@@ -45,13 +50,13 @@ const value = Math.round(power);
       </tr>
       <tr>
         <td class="flex gap-1.5 pr-4 items-center font-semibold text-(--sl-color-white) text-nowrap">
-          <ShieldHalf size={20} class="text-accent-400" /> Coat of Arms
+          <ShieldHalf size={20} class="text-(--sl-color-accent)" /> Coat of Arms
         </td>
         <td>{coatOfArms}</td>
       </tr>
       <tr>
         <td class="flex gap-1.5 pr-4 items-center font-semibold text-(--sl-color-white) text-nowrap">
-          <Sparkle size={20} class="text-accent-400" /> Religions
+          <Sparkle size={20} class="text-(--sl-color-accent)" /> Religions
         </td>
         <td>
           {religions.map((religion, i) =>
@@ -62,7 +67,7 @@ const value = Math.round(power);
       </tr>
       <!-- <tr>
         <td class="flex gap-1.5 pr-4 items-center font-semibold text-(--sl-color-white) text-nowrap">
-          <Crown size={20} class="text-accent-400" /> Heir
+          <Crown size={20} class="text-(--sl-color-accent)" /> Heir
         </td>
         <td>
           <a href={heir.link}>{heir.value}</a>
@@ -70,7 +75,7 @@ const value = Math.round(power);
       </tr>
       <tr>
         <td class="flex gap-1.5 pr-4 items-center font-semibold text-(--sl-color-white) text-nowrap">
-          <Handshake size={20} class="text-accent-400" /> Allies
+          <Handshake size={20} class="text-(--sl-color-accent)" /> Allies
         </td>
         <td>
           {allies.map((ally, i) =>
@@ -81,7 +86,7 @@ const value = Math.round(power);
       </tr>
       <tr>
         <td class="flex gap-1.5 pr-4 items-center font-semibold text-(--sl-color-white) text-nowrap">
-          <HandFist size={20} class="text-accent-400" /> Enemies
+          <HandFist size={20} class="text-(--sl-color-accent)" /> Enemies
         </td>
         <td>
           {enemies.map((enemy, i) =>

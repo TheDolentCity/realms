@@ -1,0 +1,9 @@
+---
+import { CssBuilder } from "../../utilities/css-builder";
+
+const css = new CssBuilder().addClass("p-2 text-left").build();
+---
+
+<th class={css}>
+  <slot />
+</th>

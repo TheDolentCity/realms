@@ -1,0 +1,56 @@
+---
+import { Badge } from "@astrojs/starlight/components";
+import { CssBuilder } from "../../utilities/css-builder";
+
+interface Props {
+  text: string;
+  variant?:
+    | "note"
+    | "danger"
+    | "success"
+    | "caution"
+    | "tip"
+    | "default"
+    | undefined;
+}
+
+const { text, variant = undefined } = Astro.props;
+
+const isANumber = !Number.isNaN(Number(text));
+const css = new CssBuilder()
+  // .addClass(
+  //   "leading-normal border-[1.5px] !border-[var(--sl-color-border-badge)]/20",
+  // )
+  .addClass(
+    "inline px-1 py-1 border-[1.5px] rounded leading-normal wrap-anywhere min-w-0 text-sm tabular-nums saturate-200",
+  )
+  .addClass(
+    "border-[var(--sl-color-blue)]/20 bg-[var(--sl-color-blue-low)], text-[var(--sl-color-blue-high)]",
+    !variant,
+  )
+  .addClass(
+    "border-[var(--sl-color-blue)]/20 bg-[var(--sl-color-blue-low)], text-[var(--sl-color-blue-high)]",
+    variant == "note",
+  )
+  .addClass(
+    "border-[var(--sl-color-green)]/20 bg-[var(--sl-color-green-low)], text-[var(--sl-color-green-high)]",
+    variant == "success",
+  )
+  .addClass(
+    "border-[var(--sl-color-red)]/50 bg-[var(--sl-color-red-low)], text-[var(--sl-color-red-high)]",
+    variant == "danger",
+  )
+  .addClass(
+    "border-[var(--sl-color-orange)]/50 bg-[var(--sl-color-orange-low)], text-[var(--sl-color-orange-high)]",
+    variant == "caution",
+  )
+  .addClass("font-mono", isANumber)
+  .addClass("font-serif", !isANumber)
+  .build();
+---
+
+<>
+  <span class={css}>
+    {text}
+  </span>
+</>

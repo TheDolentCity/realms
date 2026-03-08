@@ -1,0 +1,149 @@
+---
+title: Captions
+description: Random tables for captions across the game.
+---
+
+import { Aside, Badge, Steps } from '@astrojs/starlight/components';
+import Caption from "/src/components/captions/Caption.astro";
+import CaptionTable from "/src/components/captions/CaptionTable.astro";
+import CaptionTableHead from "/src/components/captions/CaptionTableHead.astro";
+import CaptionTableHeadData from "/src/components/captions/CaptionTableHeadData.astro";
+import CaptionTableBody from "/src/components/captions/CaptionTableBody.astro";
+import CaptionTableRow from "/src/components/captions/CaptionTableRow.astro";
+import CaptionTableDiceData from "/src/components/captions/CaptionTableDiceData.astro";
+import CaptionTableData from "/src/components/captions/CaptionTableData.astro";
+
+A caption is a line of text that is true to the world, or more often a character within the world. A paragraph of text could be considered a "list" of captions. For clarity's sake, captions are usually highlighted like so: <Caption variant="success" text="you are considered courteous and charming by all courts" />.
+
+When players take action or random realm events occur that change the state of the world, this is reflected in captions. If a realm has a caption like <Caption variant="danger" text="people are starving from famine" /> and a regent takes action to freely distribute grain from their stores, then they may lose this caption and instead gain the following two captions: <Caption variant="success" text="people are thankful for the regent's generosity" /> and <Caption variant="danger" text="grain stores are low" />.
+
+Makes sense, right? Instead of tracking finite stats like "**Stores:** `40/100`", we have simple diegetic sentences that shift naturally over time, conveying the state of the world.
+
+## Captions and Resolution
+The primary mechanism of the game requires regents to take actions and provide several reasons why the action should succeed. They may provide a caption as one or more of those reasons.
+
+<Aside title="Ex: Pirates">
+After a random event, a realm gains the following caption: <Caption variant="danger" text="pirates harassing naval traders" />. Left unchecked, this could lead to the loss of ships, goods, wealth, and goodwill.
+To stop the pirates, a player may want to construct additional vessels to patrol and protect their waters. They argue this will work because:
+- Realm caption → <Caption variant="success" text="the realm is covered in dense forests" />
+- Realm caption → <Caption variant="success" text="exceptional shipwrights live in the port villages" />
+- With shipwrights and timber, we have everything we need to build ships.
+
+Captions are strong reasons why an action should work, but they don't automatically mean the player gets what they want. World logic still reigns supreme. In this case, the GM arbitrates that the shipwrights will successfully construct the vessels, however they will take several weeks before they are completed. The realm gains the caption: <Caption variant="caution" text="naval vessels under construction" />.
+</Aside>
+
+## Caption Conflict
+An action's caption might conflict with another relevant caption. In these cases, *specific* beats general.
+
+<Aside title="Ex: Castle Escape">
+A great house's heir has been captured and taken to seaside Castle Morne and a player wants to send their Vassal to rescue them. They argue this should succeed because:
+- Vassal caption → <Caption variant="success" text="smuggled goods in and out of Northstar Castle during Eastmark Invasion" />
+- As a skilled smuggler, the Vassal knows how to enter a fortified castle from the ocean without notice.
+
+However, Castle Morne also has the <Caption variant="success" text="large, fortified walls" /> caption. In this case, that is a broad and general caption. Since the Vassal caption is far more specific, it "beats" the Castle's caption and the Game Master rules that the Vassal infiltrates the castle. However, the GM also rules that the smuggling experience is not enough to break the princess out of her secured cell. Unclear how the action should be resolved, the Game Master decides to roll some dice. With a dramatic result, the Game Master rules that the defenders discover the rescue attempt at the last minute and the Vassal is struck with several crossbow bolts as they sail away with the princess.
+</Aside>
+
+## Caption Types
+There are a few common caption types that indicate how a caption *generally* affects gameplay, but keep in mind that even a weakness can be used as a strength if you're clever (ex: a <Caption variant="danger" text="frail" /> character could use their appearance to convince someone they're not a threat.)
+- <Caption variant="success" text="Positive captions are green" />
+- <Caption variant="note" text="Neutral captions are blue" />
+- <Caption variant="caution" text="Temporary neutral captions are yellow" />
+- <Caption variant="danger" text="Negative captions are red" />
+
+## Regent and Vassal Captions
+Regents and vassals have disposition, skill, and experience captions. They are strongest in that order. This means that if two regents take an action that result in conflict and the first regent uses a disposition caption and the second uses an experience caption, then the second regent will more likely be the victor.
+
+### Disposition Captions
+
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+
+### Skill Captions
+
+1. <Caption variant="success" text="You are considered courteous and charming by all courts" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+
+### Experience Captions
+
+1. <Caption variant="success" text="you bested" /> <Caption text="[KNIGHT]" /> <Caption variant="success" text="in a grand tourney" />
+1. <Caption variant="success" text="you survived" /> <Caption text="[HORRIFIC-INJURY]" /> <Caption variant="success" text="and bear a gruesome scar" />
+1. <Caption variant="success" text="you killed a" /> <Caption text="[DANGEROUS-ANIMAL]" /> <Caption variant="success" text="when wandering alone" />
+1. <Caption variant="success" text="you led troops to victory at" /> <Caption text="[BATTLE]" />
+1. <Caption variant="success" text="you showed mercy to" /> <Caption text="[HOUSE]" /> <Caption variant="success" text="even though you wanted vengeance" />
+1. <Caption variant="success" text="you kept your word even though it cost" /> <Caption text="[COST]" />
+1. <Caption variant="success" text="you negotiated peace with" /> <Caption text="[HOUSE]" /> <Caption variant="success" text="avoiding bloodshed" />
+1. <Caption variant="success" text="you brokered a marriage with" /> <Caption text="[HOUSE]" /> <Caption variant="success" text="that benefitted all" />
+1. <Caption variant="success" text="you killed" /> <Caption text="[NOBLE]" /> <Caption variant="success" text="in a sanctioned duel" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+1. <Caption variant="success" text="START" /> <Caption text="[OPTION]" /> <Caption variant="success" text="END" />
+
+## Penalty Captions
+These captions are generally considered a weakness for a regent, but you may still use them as strengths if you are clever enough.
+
+### Penalty Disposition Captions
+
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+
+### Penalty Skill Captions
+
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+
+### Penalty Experience Captions
+
+1. <Caption variant="danger" text="you surrendered at" /> <Caption text="[BATTLE]" /> <Caption variant="danger" text="to save your neck" />
+1. <Caption variant="danger" text="your ineffective rule incited rebellion by" /> <Caption text="[REBELS]" /> <Caption variant="danger" text="that almost toppled your house" />
+1. <Caption variant="danger" text="your lover betrayed you for" /> <Caption text="[RIVAL]" /> <Caption variant="danger" text="humiliating you" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+1. <Caption variant="danger" text="START" /> <Caption text="[OPTION]" /> <Caption variant="danger" text="END" />
+
+## Realm Captions

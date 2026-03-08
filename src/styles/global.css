@@ -1,47 +1,48 @@
-@layer base, starlight, theme, components, utilities;
+@layer base, starlight, rapide, theme, components, utilities;
 
 @import "@astrojs/starlight-tailwind";
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
 
 @theme {
-  /* Your preferred text font. Starlight uses a system font stack by default. */
   --font-serif: "Crimson Pro Variable", serif;
   --font-sans: var(--font-serif);
   --font-num: var(--font-serif);
-  /* Your preferred code font. Starlight uses system monospace fonts by default. */
-  --font-mono: "monospace";
-  /* Your preferred accent color. Indigo is closest to Starlight’s defaults. */
-  /* --color-accent-50: var(--color-stone-50);
-  --color-accent-100: var(--color-stone-100);
-  --color-accent-200: var(--color-stone-200);
-  --color-accent-300: var(--color-stone-300);
-  --color-accent-400: var(--color-stone-400);
-  --color-accent-500: var(--color-stone-500);
-  --color-accent-600: var(--color-stone-600);
-  --color-accent-700: var(--color-stone-700);
-  --color-accent-800: var(--color-stone-800);
-  --color-accent-900: var(--color-stone-900);
-  --color-accent-950: var(--color-stone-950); */
-  /* Your preferred gray scale. Zinc is closest to Starlight’s defaults. */
-  /* --color-gray-50: var(--color-zinc-50);
-  --color-gray-100: var(--color-zinc-100);
-  --color-gray-200: var(--color-zinc-200);
-  --color-gray-300: var(--color-zinc-300);
-  --color-gray-400: var(--color-zinc-400);
-  --color-gray-500: var(--color-zinc-500);
-  --color-gray-600: var(--color-zinc-600);
-  --color-gray-700: var(--color-zinc-700);
-  --color-gray-800: var(--color-zinc-800);
-  --color-gray-900: var(--color-zinc-900);
-  --color-gray-950: var(--color-zinc-950); */
+  --font-mono: monospace;
 }
 
 /* Dark mode colors. */
 :root {
-  --sl-hue-accent: 274;
+  --sl-hue-accent: 84;
+  --sl-color-accent-low: oklch(19% 0.02 var(--sl-hue-accent));
+  --sl-color-accent: oklch(80% 0.085 var(--sl-hue-accent));
+  --sl-color-accent-high: oklch(90% 0.085 var(--sl-hue-accent));
   --sl-font: var(--font-serif);
   --sl-line-height: 1.5;
+
+  /* --sl-color-white: var(--sl-color-accent); */
+
+  /* Badge */
+  --sl-badge-default-border: var(--sl-color-accent);
+  --sl-badge-default-bg: var(--sl-color-accent-low);
+  --sl-badge-default-text: var(--sl-color-accent-high);
+
+  --sl-color-bg-badge: var(--sl-color-accent);
+  --sl-color-border-badge: var(--sl-color-accent-low);
+  --sl-color-text-badge: var(--sl-color-accent-high);
+
+  /* Button */
+  .sl-link-button {
+    &.primary {
+      background-color: var(--sl-color-accent-low);
+      border: 1px solid var(--sl-color-accent);
+      color: var(--sl-color-accent-high);
+    }
+  }
+
+  /* Headers */
+  --sl-text-h1: var(--sl-text-4xl);
+
   /* --sl-color-accent-low: #131e4f;
   --sl-color-accent: #3447ff;
   --sl-color-accent-high: #b3c7ff;
@@ -61,19 +62,17 @@
   --sl-color-accent: hsl(234, 90%, 60%);
   --sl-color-accent-low: hsl(234, 88%, 90%); */
 }
-/* Light mode colors. */
+
 :root[data-theme="light"] {
-  /* --sl-color-accent-low: #c7d6ff;
-  --sl-color-accent: #364bff;
-  --sl-color-accent-high: #182775;
-  --sl-color-white: #17181c;
-  --sl-color-gray-1: #24272f;
-  --sl-color-gray-2: #353841;
-  --sl-color-gray-3: #545861;
-  --sl-color-gray-4: #888b96;
-  --sl-color-gray-5: #c0c2c7;
-  --sl-color-gray-6: #eceef2;
-  --sl-color-gray-7: #f5f6f8;
-  --sl-color-black: #ffffff; */
-  /* --sl-color-bg-sidebar: var(--sl-color-bg-nav); */
+  --sl-color-accent-low: oklch(19% 0.04 var(--sl-hue-accent));
+  --sl-color-accent: oklch(40% 0.17 var(--sl-hue-accent));
+  --sl-color-accent-high: oklch(60% 0.17 var(--sl-hue-accent));
 }
+
+/* .sl-markdown-content li:not(:where(.not-content *)) {
+  font-family: var(--font-mono);
+} */
+
+/* .sl-markdown-content li:not(:where(.not-content *))::marker {
+  font-family: var(--font-mono);
+} */

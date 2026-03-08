@@ -1,0 +1,15 @@
+---
+import { CssBuilder } from "../../utilities/css-builder";
+
+interface Props {}
+
+const {} = Astro.props;
+
+const css = new CssBuilder()
+  .addClass("border-b-2 border-[var(--sl-color-accent)]")
+  .build();
+---
+
+<thead class={css}>
+  <slot />
+</thead>

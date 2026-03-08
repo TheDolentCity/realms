@@ -1,0 +1,9 @@
+---
+import { CssBuilder } from "../../utilities/css-builder";
+
+const css = new CssBuilder().addClass("w-full p-2").build();
+---
+
+<td class={css}>
+  <slot />
+</td>

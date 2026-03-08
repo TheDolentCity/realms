@@ -1,0 +1,124 @@
+---
+title: Create a Regent
+description: Rules for creating a regent.
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components';
+import Caption from "/src/components/captions/Caption.astro";
+
+There are nine realms of Westmark and each one needs a regent created for it. Each player must create a regent _and_ their heirs and relatives. This is a fairly straightforward process, but will take some time.
+
+If there are more than nine interested players, then some players may instead need to create vassals for a realm of Westmark. Vassals don't have as much power or resources and are beholden to their regents, but their actions are always hidden from the game update page.
+
+# Create a Regent
+There are N steps to character creation.
+
+<Steps>
+<ol>
+  <li>
+    <h3>Determine your Sex and Orientation</h3>
+    <p>Neither aspect impacts your stats. This is a medieval-inspired world, but it is not accurate to history. Bigotry on the basis of gender or sexuality is not accepted. Queer royal couples are accepted, still with the expectation that they [obtain heirs](/setting/heirs#obtaining-heirs).</p>
+  </li>
+  <li>
+    <h3><a href="#age">Determine your age</a></h3>
+    <p>Age determines your physical disposition, skills, experiences, and how many heirs that you begin with. Choose one of five age brackets: child, young, adult, old, or elder.</p>
+  </li>
+  <li>
+    <h3><a href="/character-creation/captions#regent-and-vassal-captions">Determine captions</a></h3>
+    <p>Regents have disposition, skill, and experience captions. Roll on each table a number of times based on your starting age.</p>
+  </li>
+</ol>
+</Steps>
+
+## Age
+
+Choose an age bracket: [child](#child), [young](#young), [adult](#adult), [old](#old), or [elder](#elder). This determines the amount of disposition, skills, and experience captions you begin with. It also determines your heirs.
+
+### Child
+Choose this option if you want a weaker regent, but a stronger realm.
+
+- You are <Caption text="8 + 1d4" /> years old.
+- You begin with <Caption text="1" variant="success" /> disposition captions.
+- You begin with <Caption text="1" variant="success" /> skill captions.
+- You begin with <Caption text="0" variant="success" /> experience captions.
+- You begin with <Caption text="0" variant="success" /> heirs.
+- You begin with the <Caption text="unmarried and unpromised" /> caption.
+- You begin with the <Caption text="a weak, growing child" variant="danger" /> penalty caption.
+- You begin with the <Caption text="unfit to rule" variant="danger" /> penalty caption.
+- Choose any <Caption text="3" variant="success" /> bonus realm captions.
+
+### Young
+Choose this option if you want a regent that grows far stronger once they prove themselves.
+
+- You are <Caption text="14 + 1d6" /> years old.
+- You begin with <Caption text="2" variant="success" /> disposition captions.
+- You begin with <Caption text="2" variant="success" /> skill captions.
+- You begin with <Caption text="0" variant="success" /> experience captions.
+- You begin with <Caption text="0" variant="success" /> heirs.
+- Roll a d100 for your marriage status:
+  - <Caption text="90-99" /> begin with the <Caption text="married to stranger" /> caption.
+  - <Caption text="80-89" /> begin with the <Caption text="promised to beloved" /> caption.
+  - <Caption text="50-79" /> begin with the <Caption text="promised to stranger" /> caption.
+  - <Caption text="00-49" /> begin with the <Caption text="unmarried and unpromised" /> caption.
+- You begin with the <Caption text="an unproven leader" variant="danger" /> penalty caption. If you lose this caption, you immediately gain <Caption text="1" variant="success" /> disposition, skill, and experience caption of your choice.
+
+### Adult
+Choose this option if you want a regent with strong skills and experience, albeit with a slightly weaker realm.
+
+- You are <Caption text="28 + 1d8" /> years old.
+- You begin with <Caption text="2" variant="success" /> disposition captions.
+- You begin with <Caption text="2" variant="success" /> skill captions.
+- You begin with <Caption text="2" variant="success" /> experience captions.
+- Roll a d100 for your heir status:
+  - <Caption text="95-99" /> begin with <Caption text="6" /> heirs.
+  - <Caption text="90-94" /> begin with <Caption text="5" /> heirs.
+  - <Caption text="80-89" /> begin with <Caption text="4" /> heirs.
+  - <Caption text="70-79" /> begin with <Caption text="3" /> heirs.
+  - <Caption text="60-69" /> begin with <Caption text="2" /> heirs.
+  - <Caption text="10-59" /> begin with <Caption text="1" /> heirs.
+  - <Caption text="00-09" /> begin with <Caption text="0" /> heirs.
+- Roll a d100 for your marriage status:
+  - <Caption text="90-99" /> begin with the <Caption text="married for love" /> caption.
+  - <Caption text="50-89" /> begin with the <Caption text="married for power" /> caption.
+  - <Caption text="10-49" /> begin with the <Caption text="married for alliance" /> caption.
+  - <Caption text="00-09" /> begin with the <Caption text="unwed since partner's death" /> caption.
+- You begin with <Caption text="1" variant="danger" /> penalty realm captions.
+
+### Old
+Choose this option if you want a regent with strong experience, albeit with a weaker body.
+
+- You are <Caption text="62 + 1d10" /> years old.
+- You begin with <Caption text="1" variant="success" /> disposition captions.
+- You begin with <Caption text="1" variant="success" /> skill captions.
+- You begin with <Caption text="3" variant="success" /> experience captions.
+- Roll a d100 for your heir status:
+  - <Caption text="90-99" /> begin with <Caption text="4" /> heirs.
+  - <Caption text="60-89" /> begin with <Caption text="3" /> heirs.
+  - <Caption text="20-59" /> begin with <Caption text="2" /> heirs.
+  - <Caption text="00-19" /> begin with <Caption text="1" /> heirs.
+- Roll a d100 for your marriage status:
+  - <Caption text="90-99" /> begin with the <Caption text="married for love" /> caption.
+  - <Caption text="60-89" /> begin with the <Caption text="married for power" /> caption.
+  - <Caption text="30-59" /> begin with the <Caption text="married for alliance" /> caption.
+  - <Caption text="00-29" /> begin with the <Caption text="unwed since partner's death" /> caption.
+- You begin with <Caption text="1" variant="danger" /> penalty disposition captions.
+
+### Elder
+Choose this option if you want a regent with a grand history who is not long for this world.
+
+- You are <Caption text="86 + 1d12" /> years old.
+- You begin with <Caption text="0" variant="success" /> disposition captions.
+- You begin with <Caption text="1" variant="success" /> skill captions.
+- You begin with <Caption text="4" variant="success" /> experience captions.
+- Roll a d100 for your heir status:
+  - <Caption text="70-99" /> begin with <Caption text="2" /> heirs.
+  - <Caption text="30-69" /> begin with <Caption text="1" /> heirs.
+  - <Caption text="00-29" /> begin with <Caption text="0" /> heirs.
+- Roll a d100 for your marriage status:
+  - <Caption text="90-99" /> begin with the <Caption text="married for love" /> caption.
+  - <Caption text="70-89" /> begin with the <Caption text="married for power" /> caption.
+  - <Caption text="50-69" /> begin with the <Caption text="married for alliance" /> caption.
+  - <Caption text="00-49" /> begin with the <Caption text="unwed since partner's death" /> caption.
+- You begin with <Caption text="1" variant="success" /> **legendary** experience caption. You are famous throughout all of the Realms for this experience. Its written in history and sung of in songs across Westmark.
+- You begin with the <Caption text="weak and feeble" variant="danger" /> penalty caption.
+- You begin with the <Caption text="will not see another Winter" variant="danger" /> penalty caption.

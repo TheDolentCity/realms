@@ -1,0 +1,9 @@
+---
+import { CssBuilder } from "../../utilities/css-builder";
+
+const css = new CssBuilder().addClass("").build();
+---
+
+<tbody class={css}>
+  <slot />
+</tbody>

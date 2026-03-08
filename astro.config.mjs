@@ -16,15 +16,14 @@ export default defineConfig({
     starlight({
       title: "Realms of Westmark",
       plugins: [starlightThemeRapide()],
-      // components: {
-      //   Sidebar: "./src/components/overrides/SidebarOverride.astro",
-      // },
+      components: {
+        // Sidebar: "./src/components/overrides/SidebarOverride.astro",
+      },
       customCss: [
         "./src/styles/global.css",
-        "@fontsource-variable/eb-garamond/index.css",
         "@fontsource-variable/crimson-pro/index.css",
-        "@fontsource/im-fell-dw-pica/400.css",
-        "@fontsource/averia-serif-libre/400.css",
+        "@fontsource/monaspace-xenon/400.css",
+        "@fontsource/monaspace-xenon/600.css",
       ],
       social: [
         {
@@ -46,14 +45,20 @@ export default defineConfig({
         },
         {
           label: "Rules",
-          collapsed: true,
+          collapsed: false,
           items: [
             { label: "Overview", link: "/rules/overview" },
-            { label: "Realm Actions", link: "/rules/realm-actions" },
-            { label: "Realm Checks", link: "/rules/realm-checks" },
-            { label: "Regent Checks", link: "/rules/regent-checks" },
+            { label: "Actions", link: "/rules/actions" },
+            { label: "Captions", link: "/rules/captions" },
             { label: "Writing Letters", link: "/rules/writing-letters" },
           ],
+        },
+        {
+          label: "Character Creation",
+          collapsed: true,
+          autogenerate: {
+            directory: "character-creation",
+          },
         },
         {
           label: "Setting",

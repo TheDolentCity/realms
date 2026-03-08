@@ -1,0 +1,17 @@
+---
+import { CssBuilder } from "../../utilities/css-builder";
+
+interface Props {}
+
+const {} = Astro.props;
+
+const css = new CssBuilder()
+  .addClass(
+    "not-content table-fixed border-[1.5px] border-collapse rounded border-[var(--sl-color-accent)]",
+  )
+  .build();
+---
+
+<table class={css}>
+  <slot />
+</table>
