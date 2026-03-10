@@ -1,0 +1,111 @@
+---
+title: The Realm of Frostwatch
+description: Details concerning the Westmark realm of Frostwatch.
+---
+
+import { ChessRook, ChessKnight, ChessPawn, Sparkle } from "@lucide/astro";
+import Caption from "/src/components/captions/Caption.astro";
+import RealmOverview from "/src/components/stats/RealmOverview.astro";
+import SummaryTable from "/src/components/summary/SummaryTable.astro";
+import SummaryTableRow from "/src/components/summary/SummaryTableRow.astro";
+import SummaryTableHeader from "/src/components/summary/SummaryTableHeader.astro";
+import SummaryTableData from "/src/components/summary/SummaryTableData.astro";
+import SummaryTableDataIcon from "/src/components/summary/SummaryTableDataIcon.astro";
+
+<SummaryTable>
+  <SummaryTableRow>
+    <SummaryTableHeader>
+      <SummaryTableDataIcon>
+        <ChessRook size={20} />
+      </SummaryTableDataIcon>
+      <span>Wardens</span>
+    </SummaryTableHeader>
+    <SummaryTableData>
+      <a href="./great-house-ironwood">House Ironwood</a>
+    </SummaryTableData>
+  </SummaryTableRow>
+  <SummaryTableRow>
+    <SummaryTableHeader>
+      <SummaryTableDataIcon>
+        <ChessKnight size={20} />
+      </SummaryTableDataIcon>
+      <span>Vassals</span>
+    </SummaryTableHeader>
+    <SummaryTableData>
+      <a href="./vassal-house-oldbeard">House Oldbeard</a>
+    </SummaryTableData>
+  </SummaryTableRow>
+  <SummaryTableRow>
+    <SummaryTableHeader>
+      <SummaryTableDataIcon>
+        <ChessPawn size={20} />
+      </SummaryTableDataIcon>
+      <span>Nobles</span>
+    </SummaryTableHeader>
+    <SummaryTableData>
+      <a href="./nobles-of-frostwatch#todo">TODO</a> | 
+      <a href="./nobles-of-frostwatch#todo">TODO</a> | 
+      <a href="./nobles-of-frostwatch#todo">TODO</a>
+    </SummaryTableData>
+  </SummaryTableRow>
+  <SummaryTableRow>
+    <SummaryTableHeader>
+      <SummaryTableDataIcon>
+        <Sparkle size={20} />
+      </SummaryTableDataIcon>
+      <span>Religions</span>
+    </SummaryTableHeader>
+    <SummaryTableData>
+      <a href="/setting/religion#the-great-beasts">The Great Beasts</a>
+    </SummaryTableData>
+  </SummaryTableRow>
+</SummaryTable>
+
+<RealmOverview
+  power={4}
+  wardens={{value: "House Ironwood", link: "/great-houses/house-ironwood"}}
+  coatOfArms="An ironwood tree and a harpoon head on a white field."
+  religions={[
+    { value: "The Great Beasts", link: "/setting/religion#the-great-beasts" }
+  ]}
+  />
+
+## Geography
+Frostwatch is the most northern realm, and one of the largest too. To the West and North it borders the sea. The realm of Barrowdell can be found where its southernmost hills turn marshy and the Great Lake is considered the eastern border of Misthaven. The realm is made up of vast moorlands, dense forests, and frozen hills. Despite its size, the region is not as populated as more plentiful southern realms. 
+
+- <Caption text="Lower population" variant="danger" />
+
+## People
+This is a cold northern land. The people who live here may seem bitter to outsiders, but many of them have found peace. The six month winters and constant cold harden folk. They are used to extreme hardship. Among nobility, the toughness of these northern folk appears almost like excessive pride.
+
+- <Caption text="Folk are used to extreme hardship" variant="success" />
+- <Caption text="Considered too proud by nobles" variant="danger" />
+
+## Economy
+The conditions are harsh and make it difficult to grow food, but plenty of natural resources draw in traders from the South. However, many resort to theft and robbery in order to obtain food. Fishing is a crucial industry to keep people fed, and the most profitable form is whaling. Almost all whale oil in Westmark comes from the whalers of Frostwatch.
+
+- <Caption text="The realm is covered in dense forests" variant="success" />
+- <Caption text="The realm contains vast limestone quarries" variant="success" />
+- <Caption text="All whale oil in the realm comes from Frostwatch" variant="success" />
+- <Caption text="Hungry brigands attack on the road" variant="danger" />
+- <Caption text="Difficult to grow food" variant="danger" />
+- <Caption text="Reliant on fishing" variant="danger" />
+
+## Military Strength
+
+- <Caption text="Frostwatch's fishermen are exceptional sailors in war time" variant="success" />
+
+## Religion
+The Sundered God is the most dominant religion across Westmark, but few followers of that faith can be found in Frostwatch. The people here believe in the older faiths. The most common faith is that of [The Great Beasts](/religion#the-great-beasts). There are few rules regarding worship of this folk religion, but many folk practice meditation in the wild. They treat their observance of natural events as good or ill omens. House Ironwood even has an official seer who they consult with such matters.
+
+- <Caption text="Commoners and nobles are obsessed with omens" />
+
+## Locations
+
+#### Castle Remheim, the seat of House Ironwood
+- <Caption text="A massive castle, second only to Dawnstone, with many layers of defense" variant="success" />
+- <Caption text="Its mighty walls were never breached during the Eastmark Invasion" variant="success" />
+
+#### Oldbeard Hall, the seat of House Oldbeard
+- <Caption text="Always warm in winter" variant="success" />
+- <Caption text="A small burg" />

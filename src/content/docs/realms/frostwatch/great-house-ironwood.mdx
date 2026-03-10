@@ -1,0 +1,155 @@
+---
+title: 🔷 House Ironwood
+description: Details concerning House Ironwood and its members.
+---
+
+import { Handshake, HandFist, LandPlot, ShieldHalf, Sparkle } from "@lucide/astro";
+import Caption from "/src/components/captions/Caption.astro";
+import SmallText from "/src/components/markdown/SmallText.astro";
+import SummaryTable from "/src/components/summary/SummaryTable.astro";
+import SummaryTableRow from "/src/components/summary/SummaryTableRow.astro";
+import SummaryTableHeader from "/src/components/summary/SummaryTableHeader.astro";
+import SummaryTableData from "/src/components/summary/SummaryTableData.astro";
+import SummaryTableDataIcon from "/src/components/summary/SummaryTableDataIcon.astro";
+
+{/* Spirit stats */}
+export const crime = 72;
+export const health = 46;
+export const morale = 77;
+export const reverence = 39;
+export const spirit = ((100 - crime) + health + morale + reverence) / 4;
+
+{/* Prosperity stats */}
+export const food = 10;
+export const resources = 74;
+export const trade = 59;
+export const wealth = 41;
+export const prosperity = (food + resources + trade + wealth) / 4;
+
+{/* Might stats */}
+export const army = 60;
+export const navy = 52;
+export const defenses = 91;
+export const population = 34;
+export const might = (army + navy + defenses + population) / 4;
+
+{/* Disposition stats */}
+export const age = 0;
+export const romance = 34;
+export const toughness = 83;
+export const honor = 95;
+export const disposition = (romance + toughness + honor) / 3;
+
+{/* Skills stats */}
+export const education = 40;
+export const diplomacy = 31;
+export const intrigue = 5;
+export const warfare = 78;
+export const skills = (education + diplomacy + intrigue + warfare) / 4;
+
+{/* Seat of Power stats */}
+export const guards = 72;
+export const majesty = 51;
+export const structure = 90;
+export const supplies = 83;
+export const seatOfPower = (guards + majesty + structure + supplies) / 4;
+
+<SummaryTable>
+  <SummaryTableRow>
+    <SummaryTableHeader>
+      <SummaryTableDataIcon>
+        <LandPlot size={20} />
+      </SummaryTableDataIcon>
+      <span>Realm</span>
+    </SummaryTableHeader>
+    <SummaryTableData>
+      <a href="./the-realm">Frostwatch</a>
+    </SummaryTableData>
+  </SummaryTableRow>
+  <SummaryTableRow>
+    <SummaryTableHeader>
+      <SummaryTableDataIcon>
+        <ShieldHalf size={20} />
+      </SummaryTableDataIcon>
+      <span>Coat of Arms</span>
+    </SummaryTableHeader>
+    <SummaryTableData>
+      An ironwood tree and a harpoon head on a white field.
+    </SummaryTableData>
+  </SummaryTableRow>
+  <SummaryTableRow>
+    <SummaryTableHeader>
+      <SummaryTableDataIcon>
+        <Sparkle size={20} />
+      </SummaryTableDataIcon>
+      <span>Religion</span>
+    </SummaryTableHeader>
+    <SummaryTableData>
+      <a href="/setting/religion#the-great-beasts">The Great Beasts</a>
+    </SummaryTableData>
+  </SummaryTableRow>
+  <SummaryTableRow>
+    <SummaryTableHeader>
+      <SummaryTableDataIcon>
+        <Handshake size={20} />
+      </SummaryTableDataIcon>
+      <span>Allies</span>
+    </SummaryTableHeader>
+    <SummaryTableData>
+      <a href="/misthaven/great-house-aven">House Aven</a>
+    </SummaryTableData>
+  </SummaryTableRow>
+  <SummaryTableRow>
+    <SummaryTableHeader>
+      <SummaryTableDataIcon>
+        <HandFist size={20} />
+      </SummaryTableDataIcon>
+      <span>Enemies</span>
+    </SummaryTableHeader>
+    <SummaryTableData>
+      <a href="/barrowdell/great-house-ulfrar">House Ulfrar</a>
+    </SummaryTableData>
+  </SummaryTableRow>
+</SummaryTable>
+
+## 🔷 Baeloc Ironwood
+> _Warden of Frostwatch — Regent of Westmark — Harbinger of Hoarfrost_ <br/>
+> (he/him) — 54 years old
+
+Baeloc Ironwood is the Warden of the Frostwatch realm and a Regent of Westmark. Baeloc was regarded as honorable and pragmatic from a young age, albeit a bit grim. He had two older brothers, but they died along with his parents from plague. He became Warden of Frostwatch at the young age of 13. Many doubted him, but he proved himself resolute and a true leader. Baeloc has the uncanny ability to predict the frosts and thaws of Winter, earning him the nickname of "Harbinger of Hoarfrost". He presided over a time of peace until the masked "Cairnbloods" rose up from Barrowdell and began to sack the southern villages of Frostwatch. With his main force, he drove the Cairnbloods to a safe harbor West of Skogr where his strongest knights ambushed them by sea. The Cairnbloods fought fiercely, but the battle was hopeless. Baeloc dueled their leader in single combat, striking his head from his shoulders with a single blow. When the mask was removed, he realized that it was Edgar Ulfrar, heir to Barrowdell. While this did not violate the Westmark Covenant, the house of Ulfrar was driven mad with grief and vowed revenge.
+
+- <Caption text="Able to predict frosts and thaws" variant="success" />
+- <Caption text="Outmaneuvered and defeated the rebellious Cairnbloods in battle" variant="success" />
+- <Caption text="Killed Edgar Barrowdell, leader of the Cairnbloods, in single combat" variant="success" />
+
+## 🔹 Vadir Ironwood
+> _Younger brother of Baeloc — Shipmaster — The Darktide Knight_ <br/>
+> (he/him) — 31 years old
+
+Vadir was born long after Baeloc and idolized him growing up. However, his dark nature and impulsivity grew the gulf between the two brothers. Vadir was knighted in his 17th year after a reckless, but successful, solo assault on a bandit camp. He became known as the Darktide Knight for his sudden black moods. After several violent tourney results, Baeloc kept Vadir far from his court. He named him Shipmaster of Frostwatch, a role that kept him at sea most of the time. While surveying the whaling fleet, Vadir's ship was attacked by Ichor, the Great Black Whale. The beast had destroyed whaling vessels since the time of Baeloc's grandfather. Vadir managed to destroy the beast with Thorn, a crucible steel spear capable of puncturing plate armor. Now Vadir returns home a hero. The bards are already singing new songs of his great deed.
+
+- <Caption text="Excellent sailor" variant="success" />
+- <Caption text="Wields a crucible steel spear that punctures plate armor" variant="success" />
+- <Caption text="Slew Ichor, the Great Black Whale" variant="success" />
+- <Caption text="Impulsive and hot-headed" variant="danger" />
+- <Caption text="Prone to violence" variant="danger" />
+
+## 🔹 Edwen Ironwood
+> _Wife of Baeloc — The Grey Lady_ <br/>
+> (she/her) — 43 years old
+
+Born of house Aven and married to Baeloc at the age of 20. Her parents struggled to marry her off for several years due to rumors of her dark dreams and "hysterics." Baeloc showed her kindness though, and to this day they are often seen sitting in silence together. Tall and regal, the "Grey Lady" of Frostwatch is an apt diplomat and able to cool even the hottest heads.
+
+- <Caption text="A skilled diplomat who excels at calming emotions" variant="success" />
+- <Caption text="Rumors of dark dreams and 'hysterics'" variant="danger" /> 
+
+## 🔹 Sunnild Ironwood
+> _Daughter of Baeloc — Heir to Frostwatch_ <br/>
+> (she/her) — 16 years old
+
+Sunnild, "Sunni" to close friends, is the daughter of Baeloc and heir to the realm of Frostwatch. She has height and strength to rival even the most capable knights of Westmark. Her uncle Vadir is a key influence, encouraging her to pursue her dream of becoming a knight. Baeloc wants her to give up that dream and learn from her mother how to be a diplomatic leader instead. In truth, he just wants to keep her safe.
+
+- <Caption text="Taller and stronger than boys her age" variant="success" />
+- <Caption text="Wishes to be a Knight and respected for her skill at arms" />
+- <Caption text="Wants to be like her uncle Vadir" />
+- <Caption text="Naive about the dangers of the world" variant="danger" /> 

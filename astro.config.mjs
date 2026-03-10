@@ -70,19 +70,20 @@ export default defineConfig({
         {
           label: "Realms",
           collapsed: true,
-          autogenerate: {
-            directory: "realms",
-          },
-          // items: [
-          //   {
-          //     label: "Fairfield",
-          //     autogenerate: { directory: "/realms/fairfield" },
-          //   },
-          //   {
-          //     label: "The Flooded Vale",
-          //     autogenerate: { directory: "/realms/the-flooded-vale" },
-          //   },
-          // ],
+          items: [
+            // {
+            //   label: "Fairfield",
+            //   autogenerate: { directory: "/realms/fairfield" },
+            // },
+            {
+              label: "Frostwatch",
+              autogenerate: { directory: "/realms/frostwatch" },
+            },
+            // {
+            //   label: "The Flooded Vale",
+            //   autogenerate: { directory: "/realms/the-flooded-vale" },
+            // },
+          ],
         },
         {
           label: "Great Houses",
