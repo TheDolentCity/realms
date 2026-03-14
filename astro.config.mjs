@@ -54,13 +54,6 @@ export default defineConfig({
           ],
         },
         {
-          label: "Character Creation",
-          collapsed: true,
-          autogenerate: {
-            directory: "character-creation",
-          },
-        },
-        {
           label: "Setting",
           collapsed: true,
           autogenerate: {
@@ -84,20 +77,6 @@ export default defineConfig({
             //   autogenerate: { directory: "/realms/the-flooded-vale" },
             // },
           ],
-        },
-        {
-          label: "Great Houses",
-          collapsed: true,
-          autogenerate: {
-            directory: "great-houses",
-          },
-        },
-        {
-          label: "Vassal Houses",
-          collapsed: true,
-          autogenerate: {
-            directory: "vassal-houses",
-          },
         },
       ],
     }),

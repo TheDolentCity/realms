@@ -3,36 +3,132 @@ title: 🔹 House Oldbeard
 description: Details concerning House Oldbeard and its members.
 ---
 
-House Oldbeard is a Minor House of Westmark and act as  of Oldbeard Hall. They are an old house and have been steadfast allies of House Ironwood and House Aven for hundreds of years. Their burg, Oldbeard Hall, is small, but always warm and welcoming in winter.
+import { Handshake, HandFist, Mountain, ShieldHalf, Sparkle } from "@lucide/astro";
+import Caption from "/src/components/captions/Caption.astro";
+import SmallText from "/src/components/markdown/SmallText.astro";
+import SummaryTable from "/src/components/summary/SummaryTable.astro";
+import SummaryTableRow from "/src/components/summary/SummaryTableRow.astro";
+import SummaryTableHeader from "/src/components/summary/SummaryTableHeader.astro";
+import SummaryTableData from "/src/components/summary/SummaryTableData.astro";
+import SummaryTableDataIcon from "/src/components/summary/SummaryTableDataIcon.astro";
+import AlliesIcon from "/src/components/icons/AlliesIcon.astro";
+import AllegianceIcon from "/src/components/icons/AllegianceIcon.astro";
+import CoatOfArmsIcon from "/src/components/icons/CoatOfArmsIcon.astro";
+import EnemiesIcon from "/src/components/icons/EnemiesIcon.astro";
+import RealmIcon from "/src/components/icons/RealmIcon.astro";
+import ReligionIcon from "/src/components/icons/ReligionIcon.astro";
 
-## Resources
-- **Coat of Arms**: A brown shield with a yellow beard on a white banner.
-- **Burg**: [Oldbeard Hall](/burgs/oldbeard-hall)
-- **Steward**: [Angvir Oldbeard](/stewards/angvir-oldbeard)
-- **Heir**: [Erik Oldbeard](#erik-oldbeard)
-- **Religion**: [The Great Beasts](/setting/religion#the-great-beasts)
+<SummaryTable>
+  <SummaryTableRow>
+    <SummaryTableHeader>
+      <SummaryTableDataIcon>
+        <RealmIcon />
+      </SummaryTableDataIcon>
+      <span>Realm</span>
+    </SummaryTableHeader>
+    <SummaryTableData>
+      <a href="../the-realm">Frostwatch</a>
+    </SummaryTableData>
+  </SummaryTableRow>
+  <SummaryTableRow>
+    <SummaryTableHeader>
+      <SummaryTableDataIcon>
+        <CoatOfArmsIcon />
+      </SummaryTableDataIcon>
+      <span>Coat of Arms</span>
+    </SummaryTableHeader>
+    <SummaryTableData>
+      A brown shield with a yellow beard on a white banner.
+    </SummaryTableData>
+  </SummaryTableRow>
+  <SummaryTableRow>
+    <SummaryTableHeader>
+      <SummaryTableDataIcon>
+        <ReligionIcon />
+      </SummaryTableDataIcon>
+      <span>Religion</span>
+    </SummaryTableHeader>
+    <SummaryTableData>
+      <a href="/setting/religion#the-great-beasts">The Great Beasts</a>
+    </SummaryTableData>
+  </SummaryTableRow>
+  <SummaryTableRow>
+    <SummaryTableHeader>
+      <SummaryTableDataIcon>
+        <AllegianceIcon />
+      </SummaryTableDataIcon>
+      <span>Owes allegiance</span>
+    </SummaryTableHeader>
+    <SummaryTableData>
+      <a href="./great-house-ironwood">House Ironwood</a>
+    </SummaryTableData>
+  </SummaryTableRow>
+  <SummaryTableRow>
+    <SummaryTableHeader>
+      <SummaryTableDataIcon>
+        <AlliesIcon />
+      </SummaryTableDataIcon>
+      <span>Allies</span>
+    </SummaryTableHeader>
+    <SummaryTableData>
+      <a href="/misthaven/great-house-aven">House Aven</a>
+    </SummaryTableData>
+  </SummaryTableRow>
+  <SummaryTableRow>
+    <SummaryTableHeader>
+      <SummaryTableDataIcon>
+        <EnemiesIcon />
+      </SummaryTableDataIcon>
+      <span>Enemies</span>
+    </SummaryTableHeader>
+    <SummaryTableData>
+      <a href="/barrowdell/great-house-ulfrar">House Ulfrar</a>
+    </SummaryTableData>
+  </SummaryTableRow>
+</SummaryTable>
 
-## Allies
-- [House Ironwood](/great-houses/house-ironwood)
-- [House Aven](/great-houses/house-aven)
+## 🔹 Angvir Oldbeard
+> _Head of House Oldbeard — Vassal to House Ironwood — The Knotted One_ <br/>
+> (he/him) — 84 years old
 
-### Enemies
-- [House Ulfrar](/great-houses/house-ulfrar)
+He is an old man, experienced in battle. Most of his body is covered in thick, knotted scars earning him the nickname the "Knotted One". He was mentor to Baeloc Ironwood as he aged. His husband is dead, but he has four sons who will outlive him. They often fight and bicker; many are concerned one of the younger sons may try to usurp their father's position. 
 
-### Members
-Angvir Oldbeard is the current steward. His husband is dead, but he has four sons who will outlive him.
+- <Caption text="Experienced in battle" variant="success" />
+- <Caption text="Covered in thick knotted scars" />
 
-### Angvir Oldbeard
-He is an old man, experienced in battle and with the scars to prove it. He was a mentor for Regent Ironwood growing up. His sons often fight and bicker; many are concerned one of the younger ones may try to claim the stewardship.
+## 🔸 Erik Oldbeard
+> _Heir to House Oldbeard — First in Line_ <br/>
+> (he/him) — 60 years old
 
-### Erik Oldbeard
-The oldest son. Responsible. Honorable. Tall and royal-looking.
+Long-groomed for his father's position, Erik values responsibility and honesty. The people agree he provides both. It helps that he looks like the leader of a great house with his tall and noble looks. 
 
-### Leif Oldbeard
-The loudest son. Baudy. Prone to drinking.
+- <Caption text="Responsible" variant="success" />
+- <Caption text="Noble looks" />
 
-### Gunnar Oldbeard
-The strongest son. Prone to seducing men and women of the court.
+## 🔸 Leif Oldbeard
+> _Heir to House Oldbeard — Second in Line_ <br/>
+> (he/him) — 58 years old
 
-### Yvngi Oldbeard
+Leif always preferred a more lively lifestyle, traveling on the road with minstrels and puppeteers rather than taking any of his duties seriously. He can be crass, bawdy, and outright rude to other nobles. His father has tried to stop him from drinking for years.
+
+- <Caption text="Bawdy" />
+- <Caption text="Prone to binge drinking" variant="danger" />
+
+## 🔸 Gunnar Oldbeard
+> _Heir to House Oldbeard — Third in Line_ <br/>
+> (he/him) — 51 years old
+
+
+
+- <Caption text="Sharp wit" variant="success" />
+- <Caption text="Many nobles want his head for his serial adultery" variant="danger" />
+
+## 🔸 Yvngi Oldbeard
+> _Heir to House Oldbeard — Fourth in Line_ <br/>
+> (he/him) — 38 years old
+
+- <Caption text="Bold and beautiful" variant="success" />
+- <Caption text="Killed his first man at the age of ten" variant="success" />
+- <Caption text="Rumors of an evil heart" variant="danger" />
+
 The youngest son. The boldest and most handsome. Killed his first man at the age of ten. Some say there is evil in his heart and he is best avoided.
