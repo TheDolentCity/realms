@@ -72,10 +72,10 @@ export default defineConfig({
               label: "Frostwatch",
               autogenerate: { directory: "/realms/frostwatch" },
             },
-            // {
-            //   label: "The Flooded Vale",
-            //   autogenerate: { directory: "/realms/the-flooded-vale" },
-            // },
+            {
+              label: "The Flooded Vale",
+              autogenerate: { directory: "/realms/the-flooded-vale" },
+            },
           ],
         },
       ],
